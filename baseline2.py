@@ -7,6 +7,7 @@ from sklearn.datasets import fetch_20newsgroups
 
 import read_dataset as rd
 
+
 train,test = rd.read(percent_train=.9)
 
 categories = ['fake', 'real']
@@ -82,7 +83,15 @@ print(metrics.confusion_matrix(targets, predicted))
 
 # testando vocabulario
 vectorizer = CountVectorizer() 
-corpus = [data['text'] for data in train]
+from text_processor import Preprocessor
+
+preprocessor = Preprocessor()
+corpus = [
+    preprocessor.proccess_text(
+        data['text'].decode('utf-8')
+    ) 
+    for data in train
+]
 
 X = vectorizer.fit_transform(corpus)
 
@@ -114,5 +123,5 @@ def getMostFrequentlyWords(bag_of_words, dictionary, howMany = 10):
     return idx, labels
     
 
-mostFrequenct, labels = getMostFrequentlyWords(bag_of_words, dictionary, howMany = 200)
+mostFrequenct, labels = getMostFrequentlyWords(bag_of_words, dictionary, howMany = 50)
 print( labels )
