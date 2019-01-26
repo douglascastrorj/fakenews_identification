@@ -78,3 +78,41 @@ from sklearn import metrics
 print(metrics.classification_report(targets, predicted,target_names=categories))
 
 print(metrics.confusion_matrix(targets, predicted))
+
+
+# testando vocabulario
+vectorizer = CountVectorizer() 
+corpus = [data['text'] for data in train]
+
+X = vectorizer.fit_transform(corpus)
+
+bag_of_words = X.toarray()
+dictionary = vectorizer.get_feature_names()
+
+# print( dictionary )
+# print('bag of words', bag_of_words)
+
+print( 'vocabulary has ',
+    len( vectorizer.get_feature_names() ),
+    ' words'
+)
+
+
+def getMostFrequentlyWords(bag_of_words, dictionary, howMany = 10):
+    frequencies = np.zeros(len(dictionary))
+    for i in range(0, len(bag_of_words) ):
+        for j in range(0, len(bag_of_words[i]) ):
+            frequencies[j] = frequencies[j] + bag_of_words[i][j]
+    
+    greaters = np.sort(frequencies)[len(frequencies) - howMany:]
+    idx = (-frequencies).argsort()[:howMany]
+
+    labels = []
+    for i in range(0, len(idx)):
+        labels.append(dictionary[idx[i]])
+
+    return idx, labels
+    
+
+mostFrequenct, labels = getMostFrequentlyWords(bag_of_words, dictionary, howMany = 200)
+print( labels )
