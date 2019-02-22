@@ -6,17 +6,21 @@ def read(percent_train = .8):
     import json
     import random
 
-    folder_fake = 'FakeNewsNet-master\Data\PolitiFact\FakeNewsContent\\'
-    folder_real = 'FakeNewsNet-master\Data\PolitiFact\RealNewsContent\\'
+    # folder_fake = 'FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/'
+    # folder_real = 'FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/'
+
+    folder_fake = 'full_texts\\fake\\'
+    folder_real = 'full_texts\\true\\'
 
     lista_fake = os.listdir(folder_fake)
     paths_fake =  [ folder_fake + file_name for file_name in lista_fake ]
     fake_dataset = []
     for path in paths_fake:
         with open(path) as f:
-            data = json.load(f)
+            data = f.read() #json.load(f)
+            # print data.decode('latin-1').encode('utf-8')
             relevant_data = {
-                                'text': data['text'].encode('utf8'),
+                                'text': data.decode('latin-1').encode('utf-8'),
                                 'target': 0,
                                 'target_name': 'fake'
                             }
@@ -27,9 +31,9 @@ def read(percent_train = .8):
     real_dataset = []
     for path in paths_real:
         with open(path) as f:
-            data = json.load(f)
+            data = f.read() #json.load(f)
             relevant_data = {
-                                'text': data['text'].encode('utf8'),
+                                'text': data.decode('latin-1').encode('utf-8'),
                                 'target': 1,
                                 'target_name': 'real'
                             }

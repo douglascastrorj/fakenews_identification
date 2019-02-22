@@ -7,7 +7,7 @@ from nltk.stem.porter import PorterStemmer
 
 class Preprocessor():
     def __init__(self):
-        self.stop_words = set(stopwords.words('english'))
+        self.stop_words = set(stopwords.words('portuguese'))
         self.stemmer = PorterStemmer()
         pass
 
