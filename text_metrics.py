@@ -100,11 +100,12 @@ from nltk.tag import pos_tag_sents, pos_tag
 tags_count = {}
 for data in corpus:
     try:
-        tags = pos_tag(data.strip().encode("utf-8").split(" "))
+        tokens = data.strip().encode("utf-8").split(" ")
+        tags = pos_tag(tokens)
         for tag in tags:
             try:
                 key = tag[1]
-                tags_count[key] = tags_count[key] + 1
+                tags_count[key] = tags_count[key] + 1.0/len(tokens)
             except:
                 key = tag[1]
                 tags_count[key] = 0
@@ -112,4 +113,4 @@ for data in corpus:
         pass
 
 # print tags_count     
-save_dictionary( tags_count, 'tags_frequency' + answer + '.csv')
+save_dictionary( tags_count, 'tags_frequency_normalized_' + answer + '.csv')
