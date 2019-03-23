@@ -37,11 +37,11 @@ def getWordsFrequency(bag_of_words, dictionary, howMany = 10):
 def getMostFrequentWords(words, howMany = 10):
     return sorted(words, key=lambda word: word['frequency'])[len(words)-1 - howMany: len(words)-1]
 
-def writeFile(words):
-    f= open("words.json","w+")
+def writeFile(words, title='file.txt'):
+    f= open(title,"w+")
     f.write('[')
     for word in mostFrequent:
-        obj = '\n\t{\n\t"text": "' + str(word['word']) + '",\n\t"frequency" : ' + str(word['frequency']) + '\n\t},'
+        obj = '\n\t{\n\t\t"text": "' + str(word['word']) + '",\n\t\t"frequency" : ' + str(word['frequency']) + '\n\t},'
         f.write(obj)
     f.write(']')
     f.close()
@@ -52,18 +52,42 @@ def print_dictionary(dic):
 
 
 ##################         MAIN          ##################
+folders_fake = ['FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
+folders_real = ['FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/RealNewsContent/']
 
-folder = 'FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/'
-corpus = [ data['text'] for data in rd.read_folder(folder) ]
+fake_dataset = []
+for folder_fake in folders_fake:
+    dataset = rd.read_folder(folder_fake,0,'fake')
+    fake_dataset =  fake_dataset + dataset
+
+real_dataset = []
+for folder_real in folders_real:
+    dataset = rd.read_folder(folder_real,1,'real')
+    real_dataset = real_dataset + dataset
+
+corpus_fake = [ data['text'] for data in fake_dataset ]
+corpus_real = [ data['text'] for data in real_dataset ]
+
+corpus = []
+answer = ''
+while True:
+    answer = raw_input('Calculate metrics for which dataset? (fake, real) ')
+    if answer == 'fake':
+        corpus = corpus_fake
+        break
+    elif answer == 'real':
+        corpus = corpus_real
+        break
 
 
+corpus = corpus_real
+## METRICS
 bag, dic = get_features(corpus)
 
 words = getWordsFrequency(bag, dic)
 mostFrequent = getMostFrequentWords(words, 1000)
 
-# for word in mostFrequent:
-#     print 'Word: ',word['word'],'\t\t\tFrequency: ', word['frequency']
+writeFile(mostFrequent, 'most_frequent_' + answer + '.json')
 
 processor = Preprocessor()
 
@@ -71,7 +95,6 @@ processor = Preprocessor()
 
 from nltk.tag import pos_tag_sents, pos_tag
 
-sentence = 'I am a good boy'
 tags = pos_tag(corpus[0].strip().split(" "))
 
 tags_count = {}
