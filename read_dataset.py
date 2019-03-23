@@ -1,43 +1,45 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def read(percent_train = .8):
+import os
+import json
+import random
+
+def read_folder(folder_path, target=0, target_name='fake'):
     import os
     import json
-    import random
 
-    # folder_fake = 'FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/'
-    # folder_real = 'FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/'
-
-    folder_fake = 'full_texts\\fake\\'
-    folder_real = 'full_texts\\true\\'
-
-    lista_fake = os.listdir(folder_fake)
-    paths_fake =  [ folder_fake + file_name for file_name in lista_fake ]
-    fake_dataset = []
-    for path in paths_fake:
-        with open(path) as f:
-            data = f.read() #json.load(f)
+    dataset = []
+    files = os.listdir(folder_path)
+    files_path =  [ folder_path + file_name for file_name in files ]
+    
+    for path in files_path:
+        with open(path, 'r') as f:
+            obj = json.load(f)
+            data = obj['text']
             # print data.decode('latin-1').encode('utf-8')
             relevant_data = {
-                                'text': data.decode('latin-1').encode('utf-8'),
-                                'target': 0,
-                                'target_name': 'fake'
+                                'text': data,
+                                'target': target,
+                                'target_name': target_name
                             }
-            fake_dataset.append(relevant_data)
+            dataset.append(relevant_data)
+    return dataset
 
-    lista_real = os.listdir(folder_real)
-    paths_real =  [ folder_real + file_name for file_name in lista_real ]
+def read(percent_train = .8):
+
+    folders_fake = ['FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
+    folders_real = ['FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/RealNewsContent/']
+
+    fake_dataset = []
+    for folder_fake in folders_fake:
+        dataset = read_folder(folder_fake,0,'fake')
+        fake_dataset =  fake_dataset + dataset
+
     real_dataset = []
-    for path in paths_real:
-        with open(path) as f:
-            data = f.read() #json.load(f)
-            relevant_data = {
-                                'text': data.decode('latin-1').encode('utf-8'),
-                                'target': 1,
-                                'target_name': 'real'
-                            }
-            real_dataset.append(relevant_data)
+    for folder_real in folders_real:
+        dataset = read_folder(folder_real,1,'real')
+        real_dataset = real_dataset + dataset
 
     fake_qtd = int(len(fake_dataset) * percent_train)
     real_qtd = int(len(real_dataset) * percent_train)
@@ -49,12 +51,6 @@ def read(percent_train = .8):
 
     return train, test
 
-    # dataset = fake_dataset + real_dataset    
-    # random.shuffle(dataset)
-
-    # train_qtd = int(len(dataset) * percent_train)
-    # print train_qtd
-    # return dataset[:train_qtd], dataset[train_qtd:]
 def get_text(relevant_data):
     return [data['text'] for data in relevant_data]
 

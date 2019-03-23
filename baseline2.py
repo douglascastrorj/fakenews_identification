@@ -6,6 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.datasets import fetch_20newsgroups
 
 import read_dataset as rd
+import numpy as np
 
 
 train,test = rd.read(percent_train=.9)
@@ -39,46 +40,46 @@ X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
 print(X_train_tfidf.shape)
 
 
-print ('Pipeline')
-#construindo Pipeline
-from sklearn.pipeline import Pipeline
-from sklearn.naive_bayes import MultinomialNB
-text_clf = Pipeline([('vect', CountVectorizer()),
-                      ('tfidf', TfidfTransformer()),
-                      ('clf', MultinomialNB()),
-])
+# print ('Pipeline')
+# #construindo Pipeline
+# from sklearn.pipeline import Pipeline
+# from sklearn.naive_bayes import MultinomialNB
+# text_clf = Pipeline([('vect', CountVectorizer()),
+#                       ('tfidf', TfidfTransformer()),
+#                       ('clf', MultinomialNB()),
+# ])
 
-print ('Treinando modelo...')
-# #treinando modelo
-text_clf.fit([data['text'] for data in train], [data['target'] for data in train])
-print( 'Treino concluido.')
+# print ('Treinando modelo...')
+# # #treinando modelo
+# text_clf.fit([data['text'] for data in train], [data['target'] for data in train])
+# print( 'Treino concluido.')
 
-# #avaliacao de desempenho no conjunto de teste
-import numpy as np
-docs_test = [ data['text'] for data in test ]
-targets = [ data['target'] for data in test ]
-predicted = text_clf.predict(docs_test)
-print(np.mean(predicted == targets) )
+# # #avaliacao de desempenho no conjunto de teste
+
+# docs_test = [ data['text'] for data in test ]
+# targets = [ data['target'] for data in test ]
+# predicted = text_clf.predict(docs_test)
+# print(np.mean(predicted == targets) )
 
 
-# #treinando com svm
-from sklearn.linear_model import SGDClassifier
-text_clf = Pipeline([('vect', CountVectorizer()),
-                      ('tfidf', TfidfTransformer()),
-                      ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                                            alpha=1e-3, random_state=42,
-                                            max_iter=5, tol=None)),
- ])
-text_clf.fit([data['text'] for data in train], [data['target'] for data in train])
+# # #treinando com svm
+# from sklearn.linear_model import SGDClassifier
+# text_clf = Pipeline([('vect', CountVectorizer()),
+#                       ('tfidf', TfidfTransformer()),
+#                       ('clf', SGDClassifier(loss='hinge', penalty='l2',
+#                                             alpha=1e-3, random_state=42,
+#                                             max_iter=5, tol=None)),
+#  ])
+# text_clf.fit([data['text'] for data in train], [data['target'] for data in train])
 
-predicted = text_clf.predict(docs_test)
-print(np.mean(predicted == targets) )
+# predicted = text_clf.predict(docs_test)
+# print(np.mean(predicted == targets) )
 
 # #metricas
-from sklearn import metrics
-print(metrics.classification_report(targets, predicted,target_names=categories))
+# from sklearn import metrics
+# print(metrics.classification_report(targets, predicted,target_names=categories))
 
-print(metrics.confusion_matrix(targets, predicted))
+# print(metrics.confusion_matrix(targets, predicted))
 
 
 # testando vocabulario
@@ -88,8 +89,8 @@ from text_processor import Preprocessor
 preprocessor = Preprocessor()
 corpus = [
     preprocessor.proccess_text(
-        data['text'].decode('utf-8')
-    ) 
+        data['text']
+    )
     for data in train
 ]
 
@@ -123,5 +124,5 @@ def getMostFrequentlyWords(bag_of_words, dictionary, howMany = 10):
     return idx, labels
     
 
-mostFrequenct, labels = getMostFrequentlyWords(bag_of_words, dictionary, howMany = 50)
+mostFrequenct, labels = getMostFrequentlyWords(bag_of_words, dictionary, howMany = 100)
 print( labels )

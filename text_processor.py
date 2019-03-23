@@ -4,10 +4,12 @@
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+from nltk.tag import pos_tag_sents
+
 
 class Preprocessor():
     def __init__(self):
-        self.stop_words = set(stopwords.words('portuguese'))
+        self.stop_words = set(stopwords.words('english'))
         self.stemmer = PorterStemmer()
         pass
 
@@ -20,7 +22,12 @@ class Preprocessor():
         filtered_sentence = [w for w in words if not w in self.stop_words]
         stemmed_words = [ self.stemmer.stem(word) for word in filtered_sentence ]
         return ' '.join(stemmed_words)
+    
+    def tokenize(self, text):
+        return word_tokenize(text)
 
+    def pos_tag(self, tokens):
+        return pos_tag_sents(tokens)
 
 
 # data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
