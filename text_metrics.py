@@ -97,17 +97,19 @@ processor = Preprocessor()
 
 from nltk.tag import pos_tag_sents, pos_tag
 
-tags = pos_tag(corpus[0].strip().split(" "))
-
 tags_count = {}
-
-for tag in tags:
+for data in corpus:
     try:
-        key = tag[1]
-        tags_count[key] = tags_count[key] + 1
+        tags = pos_tag(data.strip().encode("utf-8").split(" "))
+        for tag in tags:
+            try:
+                key = tag[1]
+                tags_count[key] = tags_count[key] + 1
+            except:
+                key = tag[1]
+                tags_count[key] = 0
     except:
-        key = tag[1]
-        tags_count[key] = 0
-    
+        pass
 
+# print tags_count     
 save_dictionary( tags_count, 'tags_frequency' + answer + '.csv')
