@@ -83,8 +83,6 @@ while True:
         corpus = corpus_real
         break
 
-
-corpus = corpus_real
 ## METRICS
 bag, dic = get_features(corpus)
 
