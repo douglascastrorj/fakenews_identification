@@ -46,10 +46,14 @@ def writeFile(words, title='file.txt'):
     f.write(']')
     f.close()
 
-def print_dictionary(dic):
+def save_dictionary(dic, title):
+    string = ''
     for key,value in dic.items():
-        print key, "\t", value
-
+        string = string + key + "\t"+ str(value) +'\n'
+    print string
+    f= open(title,"w+")
+    f.write(string)
+    f.close()
 
 ##################         MAIN          ##################
 folders_fake = ['FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
@@ -108,4 +112,4 @@ for tag in tags:
         tags_count[key] = 0
     
 
-print_dictionary( tags_count)
+save_dictionary( tags_count, 'tags_frequency' + answer + '.csv')
