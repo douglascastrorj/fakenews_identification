@@ -33,7 +33,10 @@ print ('Treinando modelo com Naive bayes...')
 text_clf = Pipeline([
                     ('vect', CountVectorizer()),
                       ('tfidf', TfidfTransformer()),
-                      ('clf', MultinomialNB()),
+                      # ('clf', MultinomialNB()),
+                      ('clf', SGDClassifier(loss='hinge', penalty='l2',
+                                            alpha=1e-3, random_state=42,
+                                            max_iter=7, tol=None)),
 ])
 text_clf.fit(train_text , train_target)
 print( 'Treino concluido.')

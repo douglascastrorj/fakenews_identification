@@ -114,3 +114,15 @@ for data in corpus:
 
 # print tags_count     
 save_dictionary( tags_count, 'tags_frequency_normalized_' + answer + '.csv')
+
+
+# TF-IDF ANALISYS
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+vectorizer = TfidfVectorizer()
+
+voc_matrix = vectorizer.fit_transform(corpus) #returns a matrix of dimensions documents x words
+print voc_matrix
+print voc_matrix.shape, 'documents x words' # tfidf for each word in each document
+print len(vectorizer.get_feature_names()), ' words'

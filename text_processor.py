@@ -28,12 +28,25 @@ class Preprocessor():
 
     def pos_tag(self, tokens):
         return pos_tag_sents(tokens)
-
+    
+    def n_gram(self, text, n=2):
+        words = text.split(' ')
+        model = []
+        for i in range(0, len(words) - 1):
+            model.append(words[i])
+            gram = ''
+            for j in range(0, n):
+                if(i + j < len(words)):
+                    gram = gram + '_@_' + words[i+j]
+            model.append(gram)
+        model.append(words[len(words) - 1])
+        return ' '.join(model)
 
 # data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
 
+# data = 'oi amigo legal xD'
 # preprocessor = Preprocessor()
-# print preprocessor.proccess_text(data)
+# print preprocessor.n_gram(data, n=2)
 
 # dataset = [
 # 'Today was a bad day',
