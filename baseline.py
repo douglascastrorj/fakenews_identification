@@ -12,6 +12,7 @@ import numpy as np
 from sklearn.datasets import fetch_20newsgroups
 
 import read_dataset as rd
+from text_processor import Preprocessor
 
 ## LENDO DATASET        ######################
 train,test = rd.read(percent_train=.5)
@@ -26,6 +27,32 @@ test_text = rd.get_text(test)
 test_target = rd.get_target(test)
 #################################################
 
+### PROCESSANDO TEXTO ######
+
+n_gram = 0
+tags=True
+stem = False
+remove_stop_words = False
+remove_ponctuation = False
+
+processor = Preprocessor()
+train_text =  processor.process_dataset(
+                train_text, 
+                n_gram=n_gram, 
+                stem=stem, 
+                tags=tags,
+                remove_stop_words=remove_stop_words, 
+                remove_ponctuation=remove_ponctuation
+              )
+
+test_text = processor.process_dataset(
+              test_text,
+              n_gram=n_gram, 
+              stem=stem,
+              tags=tags,
+              remove_stop_words=remove_stop_words, 
+              remove_ponctuation=remove_ponctuation
+            )
 
 ##              TREINANDO NAIVE               ##
 
