@@ -2878,3 +2878,27 @@ Matriz de Confusao:
 
 #############################################
 
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.89      0.66      0.76        64
+        real       0.73      0.92      0.81        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.81      0.79      0.79       128
+weighted avg       0.81      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[42, 22],
+ [ 5, 59]]
+
+#############################################
+
