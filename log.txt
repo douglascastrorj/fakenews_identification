@@ -1,0 +1,2880 @@
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.84      0.72      0.77        64
+        real       0.75      0.86      0.80        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.79      0.79      0.79       128
+weighted avg       0.79      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[46, 18],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.82      0.80      0.81        64
+        real       0.80      0.83      0.82        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.81      0.81      0.81       128
+weighted avg       0.81      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8671875
+              precision    recall  f1-score   support
+
+        fake       0.84      0.91      0.87        64
+        real       0.90      0.83      0.86        64
+
+   micro avg       0.87      0.87      0.87       128
+   macro avg       0.87      0.87      0.87       128
+weighted avg       0.87      0.87      0.87       128
+
+Matriz de Confusao: 
+
+[[58,  6],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.78125
+              precision    recall  f1-score   support
+
+        fake       0.78      0.78      0.78        64
+        real       0.78      0.78      0.78        64
+
+   micro avg       0.78      0.78      0.78       128
+   macro avg       0.78      0.78      0.78       128
+weighted avg       0.78      0.78      0.78       128
+
+Matriz de Confusao: 
+
+[[50, 14],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.75      0.80      0.77        64
+        real       0.78      0.73      0.76        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.77      0.77      0.77       128
+weighted avg       0.77      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [17, 47]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.84      0.73      0.78        64
+        real       0.76      0.86      0.81        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.78      0.83      0.80        64
+        real       0.82      0.77      0.79        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.78125
+              precision    recall  f1-score   support
+
+        fake       0.79      0.77      0.78        64
+        real       0.77      0.80      0.78        64
+
+   micro avg       0.78      0.78      0.78       128
+   macro avg       0.78      0.78      0.78       128
+weighted avg       0.78      0.78      0.78       128
+
+Matriz de Confusao: 
+
+[[49, 15],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.83      0.81      0.82        64
+        real       0.82      0.83      0.82        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.82      0.82      0.82       128
+weighted avg       0.82      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[52, 12],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.77      0.72      0.74        64
+        real       0.74      0.78      0.76        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.75      0.75      0.75       128
+weighted avg       0.75      0.75      0.75       128
+
+Matriz de Confusao: 
+
+[[46, 18],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.80      0.83      0.82        64
+        real       0.82      0.80      0.81        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.81      0.81      0.81       128
+weighted avg       0.81      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7265625
+              precision    recall  f1-score   support
+
+        fake       0.66      0.94      0.77        64
+        real       0.89      0.52      0.65        64
+
+   micro avg       0.73      0.73      0.73       128
+   macro avg       0.78      0.73      0.71       128
+weighted avg       0.78      0.73      0.71       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [31, 33]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6875
+              precision    recall  f1-score   support
+
+        fake       0.62      0.98      0.76        64
+        real       0.96      0.39      0.56        64
+
+   micro avg       0.69      0.69      0.69       128
+   macro avg       0.79      0.69      0.66       128
+weighted avg       0.79      0.69      0.66       128
+
+Matriz de Confusao: 
+
+[[63,  1],
+ [39, 25]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.70      0.86      0.77        64
+        real       0.82      0.62      0.71        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.76      0.74      0.74       128
+weighted avg       0.76      0.74      0.74       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [24, 40]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.67      0.95      0.79        64
+        real       0.92      0.53      0.67        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.79      0.74      0.73       128
+weighted avg       0.79      0.74      0.73       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [30, 34]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.74      0.91      0.82        64
+        real       0.88      0.69      0.77        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.79       128
+weighted avg       0.81      0.80      0.79       128
+
+Matriz de Confusao: 
+
+[[58,  6],
+ [20, 44]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.73      0.80      0.76        64
+        real       0.78      0.70      0.74        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.75      0.75      0.75       128
+weighted avg       0.75      0.75      0.75       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [19, 45]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.78      0.70      0.74        64
+        real       0.73      0.80      0.76        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.75      0.75      0.75       128
+weighted avg       0.75      0.75      0.75       128
+
+Matriz de Confusao: 
+
+[[45, 19],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.76      0.94      0.84        64
+        real       0.92      0.70      0.80        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.84      0.82      0.82       128
+weighted avg       0.84      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [19, 45]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.84      0.81      0.83        64
+        real       0.82      0.84      0.83        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[52, 12],
+ [10, 54]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.71875
+              precision    recall  f1-score   support
+
+        fake       0.73      0.69      0.71        64
+        real       0.71      0.75      0.73        64
+
+   micro avg       0.72      0.72      0.72       128
+   macro avg       0.72      0.72      0.72       128
+weighted avg       0.72      0.72      0.72       128
+
+Matriz de Confusao: 
+
+[[44, 20],
+ [16, 48]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8359375
+              precision    recall  f1-score   support
+
+        fake       0.84      0.83      0.83        64
+        real       0.83      0.84      0.84        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.84      0.84      0.84       128
+weighted avg       0.84      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [10, 54]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.81      0.80      0.80        64
+        real       0.80      0.81      0.81        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [12, 52]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.73      0.83      0.77        64
+        real       0.80      0.69      0.74        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.76      0.76      0.76       128
+weighted avg       0.76      0.76      0.76       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [20, 44]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.73      0.91      0.81        64
+        real       0.88      0.67      0.76        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.81      0.79      0.79       128
+weighted avg       0.81      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[58,  6],
+ [21, 43]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.80      0.80      0.80        64
+        real       0.80      0.80      0.80        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.72      0.98      0.83        64
+        real       0.98      0.62      0.76        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.85      0.80      0.80       128
+weighted avg       0.85      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[63,  1],
+ [24, 40]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.80      0.88      0.84        64
+        real       0.86      0.78      0.82        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.77      0.75      0.76        64
+        real       0.76      0.78      0.77        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.77      0.77      0.77       128
+weighted avg       0.77      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[48, 16],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.82      0.80      0.81        64
+        real       0.80      0.83      0.82        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.81      0.81      0.81       128
+weighted avg       0.81      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.85      0.80      0.82        64
+        real       0.81      0.86      0.83        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.79      0.88      0.83        64
+        real       0.86      0.77      0.81        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.82      0.82      0.82       128
+weighted avg       0.82      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.81      0.78      0.79        64
+        real       0.79      0.81      0.80        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[50, 14],
+ [12, 52]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.80      0.88      0.84        64
+        real       0.86      0.78      0.82        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.73      0.83      0.77        64
+        real       0.80      0.69      0.74        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.76      0.76      0.76       128
+weighted avg       0.76      0.76      0.76       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [20, 44]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.859375
+              precision    recall  f1-score   support
+
+        fake       0.85      0.88      0.86        64
+        real       0.87      0.84      0.86        64
+
+   micro avg       0.86      0.86      0.86       128
+   macro avg       0.86      0.86      0.86       128
+weighted avg       0.86      0.86      0.86       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [10, 54]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.84375
+              precision    recall  f1-score   support
+
+        fake       0.82      0.88      0.85        64
+        real       0.87      0.81      0.84        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.85      0.84      0.84       128
+weighted avg       0.85      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [12, 52]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.859375
+              precision    recall  f1-score   support
+
+        fake       0.87      0.84      0.86        64
+        real       0.85      0.88      0.86        64
+
+   micro avg       0.86      0.86      0.86       128
+   macro avg       0.86      0.86      0.86       128
+weighted avg       0.86      0.86      0.86       128
+
+Matriz de Confusao: 
+
+[[54, 10],
+ [ 8, 56]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8515625
+              precision    recall  f1-score   support
+
+        fake       0.86      0.84      0.85        64
+        real       0.85      0.86      0.85        64
+
+   micro avg       0.85      0.85      0.85       128
+   macro avg       0.85      0.85      0.85       128
+weighted avg       0.85      0.85      0.85       128
+
+Matriz de Confusao: 
+
+[[54, 10],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.79      0.89      0.84        64
+        real       0.88      0.77      0.82        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.78125
+              precision    recall  f1-score   support
+
+        fake       0.73      0.89      0.80        64
+        real       0.86      0.67      0.75        64
+
+   micro avg       0.78      0.78      0.78       128
+   macro avg       0.80      0.78      0.78       128
+weighted avg       0.80      0.78      0.78       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [21, 43]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.76      0.86      0.81        64
+        real       0.84      0.73      0.78        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [17, 47]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.69      0.92      0.79        64
+        real       0.88      0.59      0.71        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.79      0.76      0.75       128
+weighted avg       0.79      0.76      0.75       128
+
+Matriz de Confusao: 
+
+[[59,  5],
+ [26, 38]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7734375
+              precision    recall  f1-score   support
+
+        fake       0.71      0.94      0.81        64
+        real       0.91      0.61      0.73        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.81      0.77      0.77       128
+weighted avg       0.81      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [25, 39]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6875
+              precision    recall  f1-score   support
+
+        fake       0.62      0.97      0.76        64
+        real       0.93      0.41      0.57        64
+
+   micro avg       0.69      0.69      0.69       128
+   macro avg       0.77      0.69      0.66       128
+weighted avg       0.77      0.69      0.66       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [38, 26]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.80      0.81      0.81        64
+        real       0.81      0.80      0.80        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.80      0.80      0.80       128
+weighted avg       0.80      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[52, 12],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6875
+              precision    recall  f1-score   support
+
+        fake       0.82      0.48      0.61        64
+        real       0.63      0.89      0.74        64
+
+   micro avg       0.69      0.69      0.69       128
+   macro avg       0.72      0.69      0.67       128
+weighted avg       0.72      0.69      0.67       128
+
+Matriz de Confusao: 
+
+[[31, 33],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.70      0.94      0.80        64
+        real       0.90      0.59      0.72        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.80      0.77      0.76       128
+weighted avg       0.80      0.77      0.76       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [26, 38]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.640625
+              precision    recall  f1-score   support
+
+        fake       0.58      0.97      0.73        64
+        real       0.91      0.31      0.47        64
+
+   micro avg       0.64      0.64      0.64       128
+   macro avg       0.75      0.64      0.60       128
+weighted avg       0.75      0.64      0.60       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [44, 20]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6953125
+              precision    recall  f1-score   support
+
+        fake       0.63      0.97      0.76        64
+        real       0.93      0.42      0.58        64
+
+   micro avg       0.70      0.70      0.70       128
+   macro avg       0.78      0.70      0.67       128
+weighted avg       0.78      0.70      0.67       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [37, 27]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.67      0.97      0.79        64
+        real       0.94      0.52      0.67        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.80      0.74      0.73       128
+weighted avg       0.80      0.74      0.73       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [31, 33]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.73      0.95      0.82        64
+        real       0.93      0.64      0.76        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.83      0.80      0.79       128
+weighted avg       0.83      0.80      0.79       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [23, 41]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.76      0.97      0.85        64
+        real       0.96      0.69      0.80        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.86      0.83      0.82       128
+weighted avg       0.86      0.83      0.82       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [20, 44]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.78125
+              precision    recall  f1-score   support
+
+        fake       0.71      0.95      0.81        64
+        real       0.93      0.61      0.74        64
+
+   micro avg       0.78      0.78      0.78       128
+   macro avg       0.82      0.78      0.77       128
+weighted avg       0.82      0.78      0.77       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [25, 39]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.78      0.84      0.81        64
+        real       0.83      0.77      0.80        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[54, 10],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.72      0.94      0.82        64
+        real       0.91      0.64      0.75        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.82      0.79      0.78       128
+weighted avg       0.82      0.79      0.78       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [23, 41]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.79      0.88      0.83        64
+        real       0.86      0.77      0.81        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.82      0.82      0.82       128
+weighted avg       0.82      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8359375
+              precision    recall  f1-score   support
+
+        fake       0.84      0.83      0.83        64
+        real       0.83      0.84      0.84        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.84      0.84      0.84       128
+weighted avg       0.84      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [10, 54]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.76      0.89      0.82        64
+        real       0.87      0.72      0.79        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [18, 46]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8359375
+              precision    recall  f1-score   support
+
+        fake       0.92      0.73      0.82        64
+        real       0.78      0.94      0.85        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.85      0.84      0.83       128
+weighted avg       0.85      0.84      0.83       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 4, 60]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6484375
+              precision    recall  f1-score   support
+
+        fake       0.85      0.36      0.51        64
+        real       0.59      0.94      0.73        64
+
+   micro avg       0.65      0.65      0.65       128
+   macro avg       0.72      0.65      0.62       128
+weighted avg       0.72      0.65      0.62       128
+
+Matriz de Confusao: 
+
+[[23, 41],
+ [ 4, 60]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7734375
+              precision    recall  f1-score   support
+
+        fake       0.75      0.83      0.79        64
+        real       0.81      0.72      0.76        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.78      0.77      0.77       128
+weighted avg       0.78      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [18, 46]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.5625
+              precision    recall  f1-score   support
+
+        fake       1.00      0.12      0.22        64
+        real       0.53      1.00      0.70        64
+
+   micro avg       0.56      0.56      0.56       128
+   macro avg       0.77      0.56      0.46       128
+weighted avg       0.77      0.56      0.46       128
+
+Matriz de Confusao: 
+
+[[ 8, 56],
+ [ 0, 64]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6015625
+              precision    recall  f1-score   support
+
+        fake       0.56      0.95      0.71        64
+        real       0.84      0.25      0.39        64
+
+   micro avg       0.60      0.60      0.60       128
+   macro avg       0.70      0.60      0.55       128
+weighted avg       0.70      0.60      0.55       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [48, 16]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.73      0.94      0.82        64
+        real       0.91      0.66      0.76        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.82      0.80      0.79       128
+weighted avg       0.82      0.80      0.79       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [22, 42]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.5859375
+              precision    recall  f1-score   support
+
+        fake       0.92      0.19      0.31        64
+        real       0.55      0.98      0.70        64
+
+   micro avg       0.59      0.59      0.59       128
+   macro avg       0.74      0.59      0.51       128
+weighted avg       0.74      0.59      0.51       128
+
+Matriz de Confusao: 
+
+[[12, 52],
+ [ 1, 63]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.65625
+              precision    recall  f1-score   support
+
+        fake       0.83      0.39      0.53        64
+        real       0.60      0.92      0.73        64
+
+   micro avg       0.66      0.66      0.66       128
+   macro avg       0.72      0.66      0.63       128
+weighted avg       0.72      0.66      0.63       128
+
+Matriz de Confusao: 
+
+[[25, 39],
+ [ 5, 59]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7734375
+              precision    recall  f1-score   support
+
+        fake       0.78      0.77      0.77        64
+        real       0.77      0.78      0.78        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.77      0.77      0.77       128
+weighted avg       0.77      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[49, 15],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7109375
+              precision    recall  f1-score   support
+
+        fake       0.86      0.50      0.63        64
+        real       0.65      0.92      0.76        64
+
+   micro avg       0.71      0.71      0.71       128
+   macro avg       0.76      0.71      0.70       128
+weighted avg       0.76      0.71      0.70       128
+
+Matriz de Confusao: 
+
+[[32, 32],
+ [ 5, 59]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.6875
+              precision    recall  f1-score   support
+
+        fake       0.88      0.44      0.58        64
+        real       0.62      0.94      0.75        64
+
+   micro avg       0.69      0.69      0.69       128
+   macro avg       0.75      0.69      0.67       128
+weighted avg       0.75      0.69      0.67       128
+
+Matriz de Confusao: 
+
+[[28, 36],
+ [ 4, 60]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6328125
+              precision    recall  f1-score   support
+
+        fake       0.58      0.97      0.73        64
+        real       0.90      0.30      0.45        64
+
+   micro avg       0.63      0.63      0.63       128
+   macro avg       0.74      0.63      0.59       128
+weighted avg       0.74      0.63      0.59       128
+
+Matriz de Confusao: 
+
+[[62,  2],
+ [45, 19]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.703125
+              precision    recall  f1-score   support
+
+        fake       0.64      0.94      0.76        64
+        real       0.88      0.47      0.61        64
+
+   micro avg       0.70      0.70      0.70       128
+   macro avg       0.76      0.70      0.69       128
+weighted avg       0.76      0.70      0.69       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [34, 30]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.74      0.94      0.83        64
+        real       0.91      0.67      0.77        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.83      0.80      0.80       128
+weighted avg       0.83      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [21, 43]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.79      0.89      0.84        64
+        real       0.88      0.77      0.82        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.77      0.86      0.81        64
+        real       0.84      0.75      0.79        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [16, 48]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.71      0.86      0.77        64
+        real       0.82      0.64      0.72        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.76      0.75      0.75       128
+weighted avg       0.76      0.75      0.75       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [23, 41]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.68      0.95      0.79        64
+        real       0.92      0.55      0.69        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.80      0.75      0.74       128
+weighted avg       0.80      0.75      0.74       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [29, 35]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.625
+              precision    recall  f1-score   support
+
+        fake       0.58      0.94      0.71        64
+        real       0.83      0.31      0.45        64
+
+   micro avg       0.62      0.62      0.62       128
+   macro avg       0.71      0.62      0.58       128
+weighted avg       0.71      0.62      0.58       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [44, 20]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6015625
+              precision    recall  f1-score   support
+
+        fake       0.56      0.95      0.71        64
+        real       0.84      0.25      0.39        64
+
+   micro avg       0.60      0.60      0.60       128
+   macro avg       0.70      0.60      0.55       128
+weighted avg       0.70      0.60      0.55       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [48, 16]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.82      0.66      0.73        64
+        real       0.71      0.86      0.78        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.77      0.76      0.76       128
+weighted avg       0.77      0.76      0.76       128
+
+Matriz de Confusao: 
+
+[[42, 22],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6171875
+              precision    recall  f1-score   support
+
+        fake       0.57      0.94      0.71        64
+        real       0.83      0.30      0.44        64
+
+   micro avg       0.62      0.62      0.62       128
+   macro avg       0.70      0.62      0.57       128
+weighted avg       0.70      0.62      0.57       128
+
+Matriz de Confusao: 
+
+[[60,  4],
+ [45, 19]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7265625
+              precision    recall  f1-score   support
+
+        fake       0.69      0.83      0.75        64
+        real       0.78      0.62      0.70        64
+
+   micro avg       0.73      0.73      0.73       128
+   macro avg       0.74      0.73      0.72       128
+weighted avg       0.74      0.73      0.72       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [24, 40]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6328125
+              precision    recall  f1-score   support
+
+        fake       0.72      0.44      0.54        64
+        real       0.60      0.83      0.69        64
+
+   micro avg       0.63      0.63      0.63       128
+   macro avg       0.66      0.63      0.62       128
+weighted avg       0.66      0.63      0.62       128
+
+Matriz de Confusao: 
+
+[[28, 36],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.59375
+              precision    recall  f1-score   support
+
+        fake       0.55      0.95      0.70        64
+        real       0.83      0.23      0.37        64
+
+   micro avg       0.59      0.59      0.59       128
+   macro avg       0.69      0.59      0.53       128
+weighted avg       0.69      0.59      0.53       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [49, 15]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.72      0.86      0.79        64
+        real       0.83      0.67      0.74        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.78      0.77      0.76       128
+weighted avg       0.78      0.77      0.76       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [21, 43]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.578125
+              precision    recall  f1-score   support
+
+        fake       0.54      0.98      0.70        64
+        real       0.92      0.17      0.29        64
+
+   micro avg       0.58      0.58      0.58       128
+   macro avg       0.73      0.58      0.49       128
+weighted avg       0.73      0.58      0.49       128
+
+Matriz de Confusao: 
+
+[[63,  1],
+ [53, 11]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6171875
+              precision    recall  f1-score   support
+
+        fake       0.57      0.95      0.71        64
+        real       0.86      0.28      0.42        64
+
+   micro avg       0.62      0.62      0.62       128
+   macro avg       0.71      0.62      0.57       128
+weighted avg       0.71      0.62      0.57       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [46, 18]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.5625
+              precision    recall  f1-score   support
+
+        fake       0.72      0.20      0.32        64
+        real       0.54      0.92      0.68        64
+
+   micro avg       0.56      0.56      0.56       128
+   macro avg       0.63      0.56      0.50       128
+weighted avg       0.63      0.56      0.50       128
+
+Matriz de Confusao: 
+
+[[13, 51],
+ [ 5, 59]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.5703125
+              precision    recall  f1-score   support
+
+        fake       1.00      0.14      0.25        64
+        real       0.54      1.00      0.70        64
+
+   micro avg       0.57      0.57      0.57       128
+   macro avg       0.77      0.57      0.47       128
+weighted avg       0.77      0.57      0.47       128
+
+Matriz de Confusao: 
+
+[[ 9, 55],
+ [ 0, 64]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: True
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.6328125
+              precision    recall  f1-score   support
+
+        fake       0.58      0.95      0.72        64
+        real       0.87      0.31      0.46        64
+
+   micro avg       0.63      0.63      0.63       128
+   macro avg       0.73      0.63      0.59       128
+weighted avg       0.73      0.63      0.59       128
+
+Matriz de Confusao: 
+
+[[61,  3],
+ [44, 20]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.87      0.73      0.80        64
+        real       0.77      0.89      0.83        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.82      0.81      0.81       128
+weighted avg       0.82      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.85      0.73      0.79        64
+        real       0.77      0.88      0.82        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 8, 56]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.80      0.86      0.83        64
+        real       0.85      0.78      0.81        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.82      0.82      0.82       128
+weighted avg       0.82      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[55,  9],
+ [14, 50]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.85      0.70      0.77        64
+        real       0.75      0.88      0.81        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.80      0.79      0.79       128
+weighted avg       0.80      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[45, 19],
+ [ 8, 56]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.86      0.77      0.81        64
+        real       0.79      0.88      0.83        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.82      0.82      0.82       128
+weighted avg       0.82      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[49, 15],
+ [ 8, 56]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.796875
+              precision    recall  f1-score   support
+
+        fake       0.87      0.70      0.78        64
+        real       0.75      0.89      0.81        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[45, 19],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.75      0.72      0.74        64
+        real       0.73      0.77      0.75        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.74      0.74      0.74       128
+weighted avg       0.74      0.74      0.74       128
+
+Matriz de Confusao: 
+
+[[46, 18],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.84375
+              precision    recall  f1-score   support
+
+        fake       0.81      0.89      0.85        64
+        real       0.88      0.80      0.84        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.85      0.84      0.84       128
+weighted avg       0.85      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [13, 51]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.87      0.62      0.73        64
+        real       0.71      0.91      0.79        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.79      0.77      0.76       128
+weighted avg       0.79      0.77      0.76       128
+
+Matriz de Confusao: 
+
+[[40, 24],
+ [ 6, 58]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Acuracia: 0.71875
+              precision    recall  f1-score   support
+
+        fake       0.77      0.62      0.69        64
+        real       0.68      0.81      0.74        64
+
+   micro avg       0.72      0.72      0.72       128
+   macro avg       0.73      0.72      0.72       128
+weighted avg       0.73      0.72      0.72       128
+
+Matriz de Confusao: 
+
+[[40, 24],
+ [12, 52]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.87      0.73      0.80        64
+        real       0.77      0.89      0.83        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.82      0.81      0.81       128
+weighted avg       0.82      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.765625
+              precision    recall  f1-score   support
+
+        fake       0.85      0.64      0.73        64
+        real       0.71      0.89      0.79        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.78      0.77      0.76       128
+weighted avg       0.78      0.77      0.76       128
+
+Matriz de Confusao: 
+
+[[41, 23],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.890625
+              precision    recall  f1-score   support
+
+        fake       0.95      0.83      0.88        64
+        real       0.85      0.95      0.90        64
+
+   micro avg       0.89      0.89      0.89       128
+   macro avg       0.90      0.89      0.89       128
+weighted avg       0.90      0.89      0.89       128
+
+Matriz de Confusao: 
+
+[[53, 11],
+ [ 3, 61]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.85      0.62      0.72        64
+        real       0.70      0.89      0.79        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.78      0.76      0.75       128
+weighted avg       0.78      0.76      0.75       128
+
+Matriz de Confusao: 
+
+[[40, 24],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.75      0.88      0.81        64
+        real       0.85      0.70      0.77        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.80      0.79      0.79       128
+weighted avg       0.80      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[56,  8],
+ [19, 45]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8515625
+              precision    recall  f1-score   support
+
+        fake       0.83      0.89      0.86        64
+        real       0.88      0.81      0.85        64
+
+   micro avg       0.85      0.85      0.85       128
+   macro avg       0.85      0.85      0.85       128
+weighted avg       0.85      0.85      0.85       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [12, 52]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.82      0.62      0.71        64
+        real       0.70      0.86      0.77        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.76      0.74      0.74       128
+weighted avg       0.76      0.74      0.74       128
+
+Matriz de Confusao: 
+
+[[40, 24],
+ [ 9, 55]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7578125
+              precision    recall  f1-score   support
+
+        fake       0.95      0.55      0.69        64
+        real       0.68      0.97      0.80        64
+
+   micro avg       0.76      0.76      0.76       128
+   macro avg       0.81      0.76      0.75       128
+weighted avg       0.81      0.76      0.75       128
+
+Matriz de Confusao: 
+
+[[35, 29],
+ [ 2, 62]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8359375
+              precision    recall  f1-score   support
+
+        fake       0.79      0.91      0.85        64
+        real       0.89      0.77      0.82        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.84      0.84      0.84       128
+weighted avg       0.84      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[58,  6],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8359375
+              precision    recall  f1-score   support
+
+        fake       0.88      0.78      0.83        64
+        real       0.80      0.89      0.84        64
+
+   micro avg       0.84      0.84      0.84       128
+   macro avg       0.84      0.84      0.84       128
+weighted avg       0.84      0.84      0.84       128
+
+Matriz de Confusao: 
+
+[[50, 14],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.75
+              precision    recall  f1-score   support
+
+        fake       0.76      0.73      0.75        64
+        real       0.74      0.77      0.75        64
+
+   micro avg       0.75      0.75      0.75       128
+   macro avg       0.75      0.75      0.75       128
+weighted avg       0.75      0.75      0.75       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [15, 49]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.82      0.80      0.81        64
+        real       0.80      0.83      0.82        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.81      0.81      0.81       128
+weighted avg       0.81      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[51, 13],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8125
+              precision    recall  f1-score   support
+
+        fake       0.87      0.73      0.80        64
+        real       0.77      0.89      0.83        64
+
+   micro avg       0.81      0.81      0.81       128
+   macro avg       0.82      0.81      0.81       128
+weighted avg       0.82      0.81      0.81       128
+
+Matriz de Confusao: 
+
+[[47, 17],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8046875
+              precision    recall  f1-score   support
+
+        fake       0.87      0.72      0.79        64
+        real       0.76      0.89      0.82        64
+
+   micro avg       0.80      0.80      0.80       128
+   macro avg       0.81      0.80      0.80       128
+weighted avg       0.81      0.80      0.80       128
+
+Matriz de Confusao: 
+
+[[46, 18],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8203125
+              precision    recall  f1-score   support
+
+        fake       0.87      0.75      0.81        64
+        real       0.78      0.89      0.83        64
+
+   micro avg       0.82      0.82      0.82       128
+   macro avg       0.83      0.82      0.82       128
+weighted avg       0.83      0.82      0.82       128
+
+Matriz de Confusao: 
+
+[[48, 16],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7734375
+              precision    recall  f1-score   support
+
+        fake       0.82      0.70      0.76        64
+        real       0.74      0.84      0.79        64
+
+   micro avg       0.77      0.77      0.77       128
+   macro avg       0.78      0.77      0.77       128
+weighted avg       0.78      0.77      0.77       128
+
+Matriz de Confusao: 
+
+[[45, 19],
+ [10, 54]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.828125
+              precision    recall  f1-score   support
+
+        fake       0.88      0.77      0.82        64
+        real       0.79      0.89      0.84        64
+
+   micro avg       0.83      0.83      0.83       128
+   macro avg       0.83      0.83      0.83       128
+weighted avg       0.83      0.83      0.83       128
+
+Matriz de Confusao: 
+
+[[49, 15],
+ [ 7, 57]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7421875
+              precision    recall  f1-score   support
+
+        fake       0.79      0.66      0.72        64
+        real       0.71      0.83      0.76        64
+
+   micro avg       0.74      0.74      0.74       128
+   macro avg       0.75      0.74      0.74       128
+weighted avg       0.75      0.74      0.74       128
+
+Matriz de Confusao: 
+
+[[42, 22],
+ [11, 53]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.8828125
+              precision    recall  f1-score   support
+
+        fake       0.88      0.89      0.88        64
+        real       0.89      0.88      0.88        64
+
+   micro avg       0.88      0.88      0.88       128
+   macro avg       0.88      0.88      0.88       128
+weighted avg       0.88      0.88      0.88       128
+
+Matriz de Confusao: 
+
+[[57,  7],
+ [ 8, 56]]
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: True
+Remove stopwords: True
+Remove ponctuation: False
+
+Acuracia: 0.7890625
+              precision    recall  f1-score   support
+
+        fake       0.86      0.69      0.77        64
+        real       0.74      0.89      0.81        64
+
+   micro avg       0.79      0.79      0.79       128
+   macro avg       0.80      0.79      0.79       128
+weighted avg       0.80      0.79      0.79       128
+
+Matriz de Confusao: 
+
+[[44, 20],
+ [ 7, 57]]
+
+#############################################
+

@@ -35,13 +35,13 @@ class Preprocessor():
 
         processed_text = ' '.join(words)
 
-        if n_gram > 1:
-            processed_text = self.n_gram(processed_text, n_gram)
         if tags:
             try:
                 processed_text = self.apply_pos_tag(processed_text)
             except:
                 print 'Error on apply pos tag '
+        if n_gram > 1:
+            processed_text = self.n_gram(processed_text, n_gram)
 
         return processed_text
     
