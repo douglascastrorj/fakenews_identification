@@ -26,7 +26,7 @@ def read_folder(folder_path, target=0, target_name='fake'):
             dataset.append(relevant_data)
     return dataset
 
-def read(percent_train = .8):
+def read(percent_train = 1):
 
     folders_fake = ['FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
     folders_real = ['FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/RealNewsContent/']
