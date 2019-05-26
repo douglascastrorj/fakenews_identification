@@ -5,9 +5,212 @@ stem: False
 Remove stopwords: False
 Remove ponctuation: False
 
-Recall Macro: 0.7914728682170542 (+/-) 0.03195323283629473
-Precision Macro: 0.8048351913224276 (+/-) 0.03311586230145474
-F1 Macro: 0.789145147719425 (+/-) 0.032962317583538875
+Recall Macro: 0.7605204872646734 (+/-) 0.06279763087185296
+Precision Macro: 0.7818616019935283 (+/-) 0.04605356238289087
+F1 Macro: 0.7553508098984503 (+/-) 0.0705980491898947
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7605204872646734 (+/-) 0.06279763087185296
+Precision Macro: 0.7818616019935283 (+/-) 0.04605356238289087
+F1 Macro: 0.7553508098984503 (+/-) 0.0705980491898947
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7890365448504983 (+/-) 0.03291850498957119
+Precision Macro: 0.8025985593067636 (+/-) 0.04871954090901025
+F1 Macro: 0.786823662572137 (+/-) 0.0313981342072998
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7605204872646734 (+/-) 0.06279763087185296
+Precision Macro: 0.7818616019935283 (+/-) 0.04605356238289087
+F1 Macro: 0.7553508098984503 (+/-) 0.0705980491898947
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7794019933554817 (+/-) 0.06371793162201111
+Precision Macro: 0.7906313560169117 (+/-) 0.06796828543149179
+F1 Macro: 0.7773190735788733 (+/-) 0.06379583914750299
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Recall Macro: 0.7533222591362125 (+/-) 0.08645820804040219
+Precision Macro: 0.781798364513974 (+/-) 0.06469375436884992
+F1 Macro: 0.7457729997330411 (+/-) 0.09824317299620641
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: True
+
+Recall Macro: 0.7652270210409745 (+/-) 0.07310647815769214
+Precision Macro: 0.7859803921568628 (+/-) 0.05372039667644216
+F1 Macro: 0.7601990511203441 (+/-) 0.08106323293765033
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7557585825027686 (+/-) 0.04456507900085252
+Precision Macro: 0.785224956153949 (+/-) 0.049122615228782696
+F1 Macro: 0.7492581378117181 (+/-) 0.04669830921757149
+
+
+#############################################
+Features utilizadas: 
+NGRAM: 3
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.72281284606866 (+/-) 0.07347076741786888
+Precision Macro: 0.7675656189549355 (+/-) 0.0749152980606239
+F1 Macro: 0.7101437710102527 (+/-) 0.08592241339531706
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.8080841638981173 (+/-) 0.07086482487073874
+Precision Macro: 0.8101027666629756 (+/-) 0.0694761519091633
+F1 Macro: 0.8077334856903844 (+/-) 0.07118716294009736
+
+
+#############################################Features utilizadas: 
+NGRAM: 0
+pos: True
+dep: False
+tags: True
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7988925802879291 (+/-) 0.08505718752816072
+Precision Macro: 0.8084946665653187 (+/-) 0.09169974168936249
+F1 Macro: 0.7974472711457676 (+/-) 0.08486878886428588
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+pos: True
+dep: True
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.7847176079734219 (+/-) 0.09826351706774539
+Precision Macro: 0.7995496245201993 (+/-) 0.0928917670716063
+F1 Macro: 0.7816802547314908 (+/-) 0.10139541348619786
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+pos: True
+dep: False
+tags: False
+stem: True
+Remove stopwords: False
+Remove ponctuation: False
+
+Recall Macro: 0.8060908084163898 (+/-) 0.10592722808023805
+Precision Macro: 0.8182390060414548 (+/-) 0.10788871405593788
+F1 Macro: 0.8041600489212282 (+/-) 0.10724876567046276
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+pos: True
+dep: False
+tags: False
+stem: False
+Remove stopwords: True
+Remove ponctuation: False
+
+Recall Macro: 0.7657253599114064 (+/-) 0.0996563300923462
+Precision Macro: 0.7897597859571489 (+/-) 0.09256910651131317
+F1 Macro: 0.7602234335938307 (+/-) 0.10490813592838111
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 0
+pos: True
+dep: False
+tags: False
+stem: False
+Remove stopwords: False
+Remove ponctuation: True
+
+Recall Macro: 0.7847176079734219 (+/-) 0.09826351706774539
+Precision Macro: 0.7995496245201993 (+/-) 0.0928917670716063
+F1 Macro: 0.7816802547314908 (+/-) 0.10139541348619786
 
 
 #############################################

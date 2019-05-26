@@ -23,16 +23,21 @@ class Preprocessor():
                             tags=False, 
                             pos=False, 
                             dep=False, 
-                            alpha=False
+                            alpha=False,
+                            ent=False
         ):
         return [ 
             self.proccess_text(
                                 text,
-                                remove_punct=remove_punct,
-                                remove_stop_words=remove_stop_words,
-                                stem=stem,
-                                n_gram=n_gram,
-                                tags=tags
+                                remove_stop_words=False, 
+                                stem=stem, 
+                                remove_punct=remove_punct, 
+                                n_gram=n_gram, 
+                                tags=tags, 
+                                pos=pos, 
+                                dep=dep, 
+                                alpha=alpha,
+                                ent=ent
                             )
             for text in dataset
         ]
@@ -46,7 +51,8 @@ class Preprocessor():
                         tags=False, 
                         pos=False, 
                         dep=False, 
-                        alpha=False
+                        alpha=False,
+                        ent=False
         ):
 
         features = []
@@ -57,8 +63,11 @@ class Preprocessor():
         if remove_stop_words:
             tokens = [token for token in tokens if token.is_stop == False]
         if n_gram > 1:
-            n_grams = self.n_gram(tokens, n_gram)
+            for i in range(2, n_gram):
+                n_grams = n_grams + self.n_gram(tokens, n_gram)
             
+        if ent:
+            features.append(self.extract_ents(tokens))
         for token in tokens:
             features.append(token.text)
 
@@ -78,6 +87,12 @@ class Preprocessor():
         features = features + n_grams
         return ' '.join(features)
     
+    def extract_ents(self, doc):
+        ents = []
+        for ent in doc.ents:
+            ents.append(ent.label_)
+        return ents
+
     def tokenize(self, text):
         return word_tokenize(text)
     
@@ -102,14 +117,15 @@ class Preprocessor():
                 if(i + j < len(tokens)):
                     gram = gram + '_' + tokens[i+j].text
             n_grams.append(gram)
-        n_grams.append(tokens[len(tokens) - 1].text)
+        if len(tokens) > 1:
+            n_grams.append(tokens[len(tokens) - 1].text)
         return n_grams
 
 # data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
 
-# data = 'hello my old friend, are you working so much?'
+# data = 'hello my old friend, are you working so much?? 234 1% ¨7 ** ( '
 # preprocessor = Preprocessor()
-# print preprocessor.n_gram(data, n=2)
+# print( preprocessor.n_gram(preprocessor.nlp(data), n=2))
 # print( preprocessor.proccess_text(data, n_gram=2, tags=True, stem=True, remove_punct=True))
 # print preprocessor.apply_pos_tag(data)
 
