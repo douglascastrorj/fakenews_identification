@@ -5,6 +5,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.tag import pos_tag_sents, pos_tag
+from sklearn.feature_extraction.text import TfidfVectorizer
 import spacy
 
 class Preprocessor():
@@ -12,7 +13,6 @@ class Preprocessor():
         self.stop_words = set(stopwords.words('english'))
         self.stemmer = PorterStemmer()
         self.nlp = spacy.load('en_core_web_sm')
-        pass
 
     def process_dataset(    self,
                             dataset, 
@@ -26,7 +26,7 @@ class Preprocessor():
                             alpha=False,
                             ent=False
         ):
-        return [ 
+        processed_corpus = [ 
             self.proccess_text(
                                 text,
                                 remove_stop_words=False, 
@@ -41,6 +41,12 @@ class Preprocessor():
                             )
             for text in dataset
         ]
+
+        self.vectorizer = TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )
+
+        X = self.vectorizer.fit_transform(processed_corpus)
+        print(len(self.vectorizer.get_feature_names()), '- Vocabulary\n\n')
+        return X
     
     def proccess_text(  self, 
                         text, 
@@ -62,12 +68,12 @@ class Preprocessor():
             tokens = [ token for token in tokens if token.dep_ != 'punct']
         if remove_stop_words:
             tokens = [token for token in tokens if token.is_stop == False]
-        if n_gram > 1:
-            for i in range(2, n_gram):
-                n_grams = n_grams + self.n_gram(tokens, n_gram)
+        # if n_gram > 1:
+        #     for i in range(2, n_gram):
+        #         n_grams = n_grams + self.n_gram(tokens, n_gram)
             
         if ent:
-            features.append(self.extract_ents(tokens))
+            features = features + self.extract_ents(self.nlp(text))
         for token in tokens:
             features.append(token.text)
 
@@ -123,8 +129,27 @@ class Preprocessor():
 
 # data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
 
-# data = 'hello my old friend, are you working so much?? 234 1% ¨7 ** ( '
+# data = 'hello my old friend, are you working so much man??'
+
+# corpus = [
+#     'hello my old friend, are you working so much man??',
+#      "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."
+# ]
 # preprocessor = Preprocessor()
+# print( 
+#     preprocessor.process_dataset(
+#         corpus, 
+#         n_gram = 2,
+#         pos=True,
+#         tags=True,
+#         dep=True,
+#         stem = True,
+#         remove_stop_words = True,
+#         remove_punct = True,
+#         ent=True,
+#         alpha=True
+#     ) 
+# )
 # print( preprocessor.n_gram(preprocessor.nlp(data), n=2))
 # print( preprocessor.proccess_text(data, n_gram=2, tags=True, stem=True, remove_punct=True))
 # print preprocessor.apply_pos_tag(data)

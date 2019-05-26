@@ -70,14 +70,15 @@ def analisar_features(
   ##              TREINANDO NAIVE               ##
 
   print ('Treinando modelo...')
-  text_clf = Pipeline([
-                      ('vect', CountVectorizer()),
-                        ('tfidf', TfidfTransformer()),
-                        ('clf', MultinomialNB()),
-                        # ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                        #                       alpha=1e-3, random_state=42,
-                        #                       max_iter=7, tol=None)),
-  ])
+  text_clf =  MultinomialNB()
+  # Pipeline([
+  #                     ('vect', CountVectorizer()),
+  #                       ('tfidf', TfidfTransformer()),
+  #                       ('clf', MultinomialNB()),
+  #                       # ('clf', SGDClassifier(loss='hinge', penalty='l2',
+  #                       #                       alpha=1e-3, random_state=42,
+  #                       #                       max_iter=7, tol=None)),
+  # ])
   text_clf.fit(train_text , train_target)
   print( 'Treino concluido.')
 
@@ -123,17 +124,6 @@ train_target = rd.get_target(train)
 # test_text = rd.get_text(test)
 # test_target = rd.get_target(test)
 #################################################
-
-remove_stop_words=False
-stem=False
-remove_punct=False
-n_gram=1
-tags=False
-pos=False
-dep=False
-alpha=False
-ent=False
-
 
 combinations = [
   {
