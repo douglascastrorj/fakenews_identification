@@ -2,25 +2,32 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer, TfidfTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import SGDClassifier
 from sklearn import metrics
 import numpy as np
 from sklearn.model_selection import cross_val_score, cross_validate, ShuffleSplit
+from sklearn.model_selection import KFold
 
-from sklearn.metrics import recall_score
+from sklearn.metrics import recall_score, confusion_matrix
 
 import read_dataset as rd
 from text_processor import Preprocessor
+from features_combinations import get_combinations
 
 ### PROCESSANDO TEXTO ######
 
+def extract_indexes(arr, indexes):
+  selected = []
+  for index in indexes:
+    selected.append(arr[index])
+  return np.array(selected)
+
 def analisar_features(
   train_text,
-  n_gram = 0,
+  n_gram = 1,
   pos=False,
   tags=False,
   dep=False,
@@ -56,44 +63,21 @@ def analisar_features(
                   dep=dep,
                   alpha=alpha
                 )
-  # test_text = processor.process_dataset(
-  #               test_text,
-  #               n_gram=n_gram, 
-  #               stem=stem,
-  #               tags=tags,
-  #               remove_stop_words=remove_stop_words, 
-  #               remove_punct=remove_punct,
-  #               pos=pos,
-  #               dep=dep
-  #             )
 
   ##              TREINANDO NAIVE               ##
 
   print ('Treinando modelo...')
-  text_clf =  MultinomialNB()
-  # Pipeline([
-  #                     ('vect', CountVectorizer()),
-  #                       ('tfidf', TfidfTransformer()),
-  #                       ('clf', MultinomialNB()),
-  #                       # ('clf', SGDClassifier(loss='hinge', penalty='l2',
-  #                       #                       alpha=1e-3, random_state=42,
-  #                       #                       max_iter=7, tol=None)),
-  # ])
-  text_clf.fit(train_text , train_target)
-  print( 'Treino concluido.')
+  text_clf = Pipeline([
+                      # ('vect', CountVectorizer()),
+                        # ('tfidf', TfidfTransformer()),
+                        ('vect',TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )),
+                        ('clf', MultinomialNB()),
+                        # ('clf', SGDClassifier(loss='hinge', penalty='l2',
+                        #                       alpha=1e-3, random_state=42,
+                        #                       max_iter=7, tol=None)),
+                ])
 
-  scoring = ['precision_macro', 'recall_macro', 'f1_macro']
-  cv = ShuffleSplit(n_splits=5, test_size=0.3, random_state=0 )
-  scores = cross_validate(text_clf, train_text, train_target, cv=5, scoring=scoring)
-  print(scores['test_precision_macro'])
-  print(scores['test_recall_macro'])
-  print(scores['test_f1_macro'])
-
-  print("Accuracy: %0.2f (+/- %0.2f)" % (scores['test_f1_macro'].mean(), scores['test_f1_macro'].std() * 2))
-
-  print('Escrevendo arquivo de log\n')
-  file = open('log_features.txt', 'a')
-
+  file = open('k_fold_tfidf.txt', 'a')
   file.write('Features utilizadas: \n' )
   file.write('NGRAM: '+ str(n_gram) + '\n' )
   file.write('pos: '+ str(pos) + '\n' )
@@ -105,9 +89,45 @@ def analisar_features(
   file.write('Remove stopwords: '+ str(remove_stop_words) + '\n' )
   file.write('Remove ponctuation: '+ str(remove_punct) + '\n\n' )
 
-  file.write('Recall Macro: ' + str(scores['test_recall_macro'].mean()) + ' (+/-) ' + str(scores['test_recall_macro'].std() * 2) + '\n' )
-  file.write('Precision Macro: ' + str(scores['test_precision_macro'].mean()) + ' (+/-) ' + str(scores['test_precision_macro'].std() * 2) + '\n' )
-  file.write('F1 Macro: ' + str(scores['test_f1_macro'].mean()) + ' (+/-) ' +str(scores['test_f1_macro'].std() * 2) + '\n' )
+  kf = KFold(n_splits=10)
+  f1 = []
+  precision =[]
+  recall = []
+  for train_index, test_index in kf.split(train_text):
+    # print('Kfold train_index: ', train_index, '\ntest_index: ', test_index)
+
+    X_train, X_test = extract_indexes(train_text, train_index), extract_indexes(train_text, test_index)
+    y_train, y_test = extract_indexes(train_target, train_index), extract_indexes(train_target, test_index)
+
+    print(' train target ',extract_indexes(train_target, train_index))
+    print(' test target ',extract_indexes(train_target, test_index))
+    text_clf.fit(X_train, y_train)
+    y_pred = text_clf.predict(X_test)
+    print(confusion_matrix(y_test, y_pred))
+    print(metrics.classification_report(y_test, y_pred, target_names=categories))
+
+    file.write( metrics.classification_report(y_test, y_pred, target_names=categories) )
+
+    precision.append(metrics.precision_score(y_test, y_pred))
+    recall.append(metrics.recall_score(y_test, y_pred))
+    f1.append(metrics.f1_score(y_test, y_pred))
+
+  f1 = np.array(f1)
+  precision = np.array(precision)
+  recall = np.array(recall)
+
+  f1_mean =f1.mean()
+  precision_mean = precision.mean()
+  recall_mean = recall.mean()
+
+  f1_std = f1.std()
+  precision_std = precision.std()
+  recall_std = recall.std()
+
+  print('Escrevendo arquivo de log\n')
+  file.write('Recall Macro: ' + str(recall_mean) + ' (+/-) ' + str(recall_std * 2) + '\n' )
+  file.write('Precision Macro: ' + str(precision_mean) + ' (+/-) ' + str(precision_std * 2) + '\n' )
+  file.write('F1 Macro: ' + str(f1_mean) + ' (+/-) ' +str(f1_std * 2) + '\n' )
 
   file.write('\n\n#############################################\n\n')
   file.close() 
@@ -125,251 +145,7 @@ train_target = rd.get_target(train)
 # test_target = rd.get_target(test)
 #################################################
 
-combinations = [
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':True,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':True,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':2,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':True,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':True,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':True,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':True,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':True
-  },
-  # dois ao mesmo tempo
-  {
-    'remove_stop_words':True,
-    'stem':True,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':True,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':2,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':True,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':True,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':True,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':True,
-    'ent':False
-  },
-  {
-    'remove_stop_words':True,
-    'stem':False,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':True
-  },
-  {
-    'remove_stop_words':False,
-    'stem':True,
-    'remove_punct':True,
-    'n_gram':1,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':True,
-    'remove_punct':False,
-    'n_gram':2,
-    'tags':False,
-    'pos':False,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':True,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':True,
-    'pos':True,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-  {
-    'remove_stop_words':False,
-    'stem':True,
-    'remove_punct':False,
-    'n_gram':1,
-    'tags':True,
-    'pos':True,
-    'dep':False,
-    'alpha':False,
-    'ent':False
-  },
-]
+combinations = get_combinations()
 
 
 for combination in combinations:
@@ -385,8 +161,6 @@ for combination in combinations:
                     ent=combination['ent']
                     )
 
-
-
 #avaliacao de desempenho no conjunto de teste
 # predicted = text_clf.predict(test_text)
 # print('acuracia ', np.mean(predicted == test_target) )
@@ -399,10 +173,4 @@ for combination in combinations:
 # The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. 
 # The recall is intuitively the ability of the classifier to find all the positive samples.
 # The best value is 1 and the worst value is 0.
-#metricas
-# print(metrics.classification_report(test_target, predicted,target_names=categories))
-# print(metrics.f1_score(test_target, predicted))
-# print(metrics.precision_score(test_target, predicted))
-# print(metrics.recall_score(test_target, predicted))
-# print(metrics.confusion_matrix(test_target, predicted))
 

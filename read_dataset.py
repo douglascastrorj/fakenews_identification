@@ -49,6 +49,9 @@ def read(percent_train = 1):
     train = fake_dataset[:fake_qtd] + real_dataset[:real_qtd]
     test = fake_dataset[fake_qtd:] + real_dataset[real_qtd:]
 
+    random.shuffle(train)
+    random.shuffle(test)
+
     return train, test
 
 def get_text(relevant_data):
