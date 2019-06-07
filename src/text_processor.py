@@ -9,6 +9,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 import spacy
 from itertools import groupby
 
+# https://pypi.org/project/lexicalrichness/
+
 def lexical_diversity(text):
     return len(set(text)) / len(text)
  
