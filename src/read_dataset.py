@@ -28,8 +28,8 @@ def read_folder(folder_path, target=0, target_name='fake'):
 
 def read(percent_train = 1):
 
-    folders_fake = ['FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
-    folders_real = ['FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/', 'FakeNewsNet-master/Data/PolitiFact/RealNewsContent/']
+    folders_fake = ['../datasets/FakeNewsNet-master/Data/BuzzFeed/FakeNewsContent/', '../datasets/FakeNewsNet-master/Data/PolitiFact/FakeNewsContent/']
+    folders_real = ['../datasets/FakeNewsNet-master/Data/BuzzFeed/RealNewsContent/', '../datasets/FakeNewsNet-master/Data/PolitiFact/RealNewsContent/']
 
     fake_dataset = []
     for folder_fake in folders_fake:
