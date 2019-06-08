@@ -61,21 +61,23 @@ def analisar_features(
                   remove_punct=remove_punct,
                   pos=pos,
                   dep=dep,
-                  alpha=alpha
+                  alpha=alpha,
+                  vectorizer='count'
                 )
 
   ##              TREINANDO NAIVE               ##
 
   print ('Treinando modelo...')
-  text_clf = Pipeline([
-                      # ('vect', CountVectorizer()),
-                        # ('tfidf', TfidfTransformer()),
-                        ('vect',TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )),
-                        ('clf', MultinomialNB()),
-                        # ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                        #                       alpha=1e-3, random_state=42,
-                        #                       max_iter=7, tol=None)),
-                ])
+  text_clf = MultinomialNB()
+  # text_clf = Pipeline([
+  #                     # ('vect', CountVectorizer()),
+  #                       # ('tfidf', TfidfTransformer()),
+  #                       ('vect',TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )),
+  #                       ('clf', MultinomialNB()),
+  #                       # ('clf', SGDClassifier(loss='hinge', penalty='l2',
+  #                       #                       alpha=1e-3, random_state=42,
+  #                       #                       max_iter=7, tol=None)),
+  #               ])
 
   file = open('k_fold_tfidf.txt', 'a')
   file.write('Features utilizadas: \n' )

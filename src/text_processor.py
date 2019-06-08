@@ -57,6 +57,14 @@ class Preprocessor():
                             sentiment=False,
                             vectorizer='count'
         ):
+
+        # return processed_corpus
+        if vectorizer == 'tfidf':
+            self.vectorizer = TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )
+            n_gram = 1
+        else:
+            self.vectorizer = CountVectorizer()
+        
         processed_corpus = [ 
             self.proccess_text(
                                 text,
@@ -74,15 +82,11 @@ class Preprocessor():
             for text in dataset
         ]
 
-        return processed_corpus
-        # if vectorizer == 'tfidf':
-        #     self.vectorizer = TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )
-        # else:
-        #     self.vectorizer = CountVectorizer()
+      
 
-        # X = self.vectorizer.fit_transform(processed_corpus)
+        X = self.vectorizer.fit_transform(processed_corpus)
         # print(len(self.vectorizer.get_feature_names()), '- Vocabulary\n\n')
-        # return X
+        return X.toarray()
     
     def proccess_text(  self, 
                         text, 
