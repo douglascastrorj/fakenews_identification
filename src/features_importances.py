@@ -48,7 +48,7 @@ indices = np.argsort(importances)[::-1]
 
 # Print the feature ranking
 print("Feature ranking:")
-limit = 1000
+limit = 2500
 has_more_than_limit = X.shape[1] > limit
 max_features = limit if has_more_than_limit else X.shape[1]
 

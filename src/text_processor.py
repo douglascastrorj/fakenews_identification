@@ -105,9 +105,9 @@ class Preprocessor():
             tokens = [ token for token in tokens if token.dep_ != 'punct']
         if remove_stop_words:
             tokens = [token for token in tokens if token.is_stop == False]
-        # if n_gram > 1:
-        #     for i in range(2, n_gram):
-        #         n_grams = n_grams + self.n_gram(tokens, n_gram)
+        if n_gram > 1:
+            for i in range(2, n_gram):
+                n_grams = n_grams + self.n_gram(tokens, n_gram)
             
         if ent:
             features = features + self.extract_ents(self.nlp(text))
