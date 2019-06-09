@@ -246,3 +246,16 @@ def get_combinations():
     }
     ]
     return combinations
+
+def use_all_features():
+    return [{
+        'remove_stop_words':True,
+        'stem':True,
+        'remove_punct':True,
+        'n_gram':2,
+        'tags':True,
+        'pos':True,
+        'dep':True,
+        'alpha':True,
+        'ent':True
+    }]

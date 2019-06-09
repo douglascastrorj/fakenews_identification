@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.tag import pos_tag_sents, pos_tag
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-import spacy
+from lexicalrichness import LexicalRichness
 from itertools import groupby
+import spacy
+import numpy as np
+
 
 # https://pypi.org/project/lexicalrichness/
 
@@ -39,7 +40,6 @@ def yule(entry):
 
 class Preprocessor():
     def __init__(self):
-        self.stop_words = set(stopwords.words('english'))
         self.stemmer = PorterStemmer()
         self.nlp = spacy.load('en_core_web_lg')
 
@@ -60,8 +60,9 @@ class Preprocessor():
 
         # return processed_corpus
         if vectorizer == 'tfidf':
-            self.vectorizer = TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )
-            n_gram = 1
+            # self.vectorizer = TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )
+            self.vectorizer = TfidfVectorizer()
+            # n_gram = 1
         else:
             self.vectorizer = CountVectorizer()
         
@@ -82,11 +83,35 @@ class Preprocessor():
             for text in dataset
         ]
 
-      
+        lex_features = [ ]
+        for text in dataset:
+            lex = LexicalRichness(text)
+            li = []
+            try:
+                li.append(lex.ttr)
+            except:
+                li.append(0.0)
+            try:
+                li.append(lex.rttr)
+            except:
+                li.append(0.0)
+            try:
+                li.append(lex.cttr)
+            except:
+                li.append(0.0)
+            try:
+                li.append(lex.mtld(threshold=0.72))
+            except:
+                li.append(0.0) 
+            lex_features.append(li)
+        lex_features = np.array(lex_features)
 
         X = self.vectorizer.fit_transform(processed_corpus)
+        X = X.toarray()
+        X = np.concatenate((X, lex_features), axis=1)
+
         # print(len(self.vectorizer.get_feature_names()), '- Vocabulary\n\n')
-        return X.toarray()
+        return X
     
     def proccess_text(  self, 
                         text, 
@@ -110,8 +135,7 @@ class Preprocessor():
         if remove_stop_words:
             tokens = [token for token in tokens if token.is_stop == False]
         if n_gram > 1:
-            for i in range(2, n_gram):
-                n_grams = n_grams + self.n_gram(tokens, n_gram)
+            n_grams = n_grams + self.n_gram(tokens, n_gram)
             
         if ent:
             features = features + self.extract_ents(self.nlp(text))
@@ -145,9 +169,6 @@ class Preprocessor():
         for token in doc:
             sentiments.append(token.sentiment)
         return sentiments
-
-    def tokenize(self, text):
-        return word_tokenize(text)
     
     def apply_pos_tag(self, text):
         words = text.strip().encode("utf-8").split(" ")
