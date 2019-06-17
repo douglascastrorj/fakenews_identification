@@ -35,7 +35,9 @@ def analisar_features(
   remove_stop_words = False,
   remove_punct = False,
   ent=False,
-  alpha=False
+  alpha=False,
+  lex=False,
+  file_path='log.txt'
 ):
 
   print('Features utilizadas: \n' )
@@ -62,7 +64,8 @@ def analisar_features(
                   pos=pos,
                   dep=dep,
                   alpha=alpha,
-                  vectorizer='count'
+                  vectorizer='count',
+                  lex=lex
                 )
 
   ##              TREINANDO NAIVE               ##
@@ -79,7 +82,7 @@ def analisar_features(
   #                       #                       max_iter=7, tol=None)),
   #               ])
 
-  file = open('k_fold_tfidf.txt', 'a')
+  file = open(file_path, 'a')
   file.write('Features utilizadas: \n' )
   file.write('NGRAM: '+ str(n_gram) + '\n' )
   file.write('pos: '+ str(pos) + '\n' )
@@ -160,7 +163,23 @@ for combination in combinations:
                     pos=combination['pos'], 
                     dep=combination['dep'], 
                     alpha=combination['alpha'],
-                    ent=combination['ent']
+                    ent=combination['ent'],
+                    lex=False,
+                    file_path='kfold_normalized.txt'
+                    )
+
+  analisar_features(train_text,
+                    stem=combination['stem'],
+                    remove_stop_words=combination['remove_stop_words'], 
+                    remove_punct=combination['remove_punct'], 
+                    n_gram=combination['n_gram'], 
+                    tags=combination['tags'], 
+                    pos=combination['pos'], 
+                    dep=combination['dep'], 
+                    alpha=combination['alpha'],
+                    ent=combination['ent'],
+                    lex=True,
+                    file_path='kfold_lex_normalized.txt'
                     )
 
 #avaliacao de desempenho no conjunto de teste

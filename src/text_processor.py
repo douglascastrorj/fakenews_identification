@@ -5,6 +5,7 @@ from nltk.stem.porter import PorterStemmer
 from nltk.tag import pos_tag_sents, pos_tag
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from lexicalrichness import LexicalRichness
+from sklearn import preprocessing
 from itertools import groupby
 import spacy
 import numpy as np
@@ -55,7 +56,9 @@ class Preprocessor():
                             alpha=False,
                             ent=False,
                             sentiment=False,
-                            vectorizer='count'
+                            vectorizer='count',
+                            lex=False,
+                            normalize=False
         ):
 
         # return processed_corpus
@@ -83,32 +86,39 @@ class Preprocessor():
             for text in dataset
         ]
 
-        lex_features = [ ]
-        for text in dataset:
-            lex = LexicalRichness(text)
-            li = []
-            try:
-                li.append(lex.ttr)
-            except:
-                li.append(0.0)
-            try:
-                li.append(lex.rttr)
-            except:
-                li.append(0.0)
-            try:
-                li.append(lex.cttr)
-            except:
-                li.append(0.0)
-            try:
-                li.append(lex.mtld(threshold=0.72))
-            except:
-                li.append(0.0) 
-            lex_features.append(li)
-        lex_features = np.array(lex_features)
-
         X = self.vectorizer.fit_transform(processed_corpus)
         X = X.toarray()
-        X = np.concatenate((X, lex_features), axis=1)
+
+        if normalize:
+            X = preprocessing.normalize(X)
+
+        if lex:
+            lex_features = [ ]
+            for text in dataset:
+                lex = LexicalRichness(text)
+                li = []
+                try:
+                    li.append(lex.ttr)
+                except:
+                    li.append(0.0)
+                try:
+                    li.append(lex.rttr)
+                except:
+                    li.append(0.0)
+                try:
+                    li.append(lex.cttr)
+                except:
+                    li.append(0.0)
+                try:
+                    li.append(lex.mtld(threshold=0.72))
+                except:
+                    li.append(0.0) 
+                lex_features.append(li)
+            lex_features = np.array(lex_features)
+            if normalize:
+                lex_features = preprocessing.normalize(lex_features)
+
+            X = np.concatenate((X, lex_features), axis=1)
 
         # print(len(self.vectorizer.get_feature_names()), '- Vocabulary\n\n')
         return X
