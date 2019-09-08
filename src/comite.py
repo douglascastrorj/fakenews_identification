@@ -1,23 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer, TfidfTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import SGDClassifier
+from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
+from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 import numpy as np
 from sklearn.model_selection import cross_val_score, cross_validate, ShuffleSplit
 from sklearn.model_selection import KFold
-from sklearn.ensemble import RandomForestClassifier, VotingClassifier
-
 from sklearn.metrics import recall_score, confusion_matrix
 
 import read_dataset as rd
 from text_processor import Preprocessor
-from features_combinations import get_combinations, use_custom
+from features_combinations import get_combinations
 
 ### PROCESSANDO TEXTO ######
 
@@ -73,20 +72,17 @@ def analisar_features(
   ##              TREINANDO NAIVE               ##
 
   print ('Treinando modelo...')
-  # text_clf = RandomForestClassifier()
-  # text_clf = SVC(kernel='rbf', C=100, gamma=0.0001)
-  # text_clf =  SGDClassifier(loss='hinge', penalty='l2',
-  #                           alpha=1e-3, random_state=42,
-  #                           max_iter=7, tol=None)
-  text_clf = Pipeline([
-                      # ('vect', CountVectorizer()),
-                        # ('tfidf', TfidfTransformer()),
-                        #('vect',TfidfVectorizer( ngram_range=(1, n_gram), max_df=0.5, min_df=2 )),
-                        ('clf', MultinomialNB()),
-                        # ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                        #                       alpha=1e-3, random_state=42,
-                        #                       max_iter=7, tol=None)),
-                ])
+  clf1 = LogisticRegression(solver='lbfgs', multi_class='multinomial',
+                      random_state=1)
+  clf2 = RandomForestClassifier(n_estimators=50, random_state=1)
+  # clf3 = SGDClassifier(loss='hinge', penalty='l2',
+  #                       alpha=1e-3, random_state=42,
+  #                       max_iter=7, tol=None)
+  clf3 = MultinomialNB()
+  clf4 = SVC(C=100, gamma=5e-05, kernel='rbf')
+  text_clf = VotingClassifier(estimators=[
+               ('lr', clf1), ('rf', clf2), ('mnb', clf3), ('svm', clf4)], voting='hard')
+ 
 
   file = open(file_path, 'a')
   file.write('Features utilizadas: \n' )
@@ -100,7 +96,7 @@ def analisar_features(
   file.write('Remove stopwords: '+ str(remove_stop_words) + '\n' )
   file.write('Remove ponctuation: '+ str(remove_punct) + '\n\n' )
 
-  kf = KFold(n_splits=5)
+  kf = KFold(n_splits=10)
   f1 = []
   precision =[]
   recall = []
@@ -156,7 +152,7 @@ train_target = rd.get_target(train)
 # test_target = rd.get_target(test)
 #################################################
 
-combinations = use_custom()
+combinations = get_combinations()
 
 
 for combination in combinations:
@@ -171,33 +167,5 @@ for combination in combinations:
                     alpha=combination['alpha'],
                     ent=combination['ent'],
                     lex=False,
-                    file_path='log.txt'
+                    file_path='kfold_comite_4.txt'
                     )
-
-  # analisar_features(train_text,
-  #                   stem=combination['stem'],
-  #                   remove_stop_words=combination['remove_stop_words'], 
-  #                   remove_punct=combination['remove_punct'], 
-  #                   n_gram=combination['n_gram'], 
-  #                   tags=combination['tags'], 
-  #                   pos=combination['pos'], 
-  #                   dep=combination['dep'], 
-  #                   alpha=combination['alpha'],
-  #                   ent=combination['ent'],
-  #                   lex=True,
-  #                   file_path='kfold_lex_normalized.txt'
-  #                   )
-
-#avaliacao de desempenho no conjunto de teste
-# predicted = text_clf.predict(test_text)
-# print('acuracia ', np.mean(predicted == test_target) )
-
-# Compute the precision
-# The precision is the ratio tp / (tp + fp) where tp is the number of true positives and fp the number of false positives. 
-# The precision is intuitively the ability of the classifier not to label as positive a sample that is negative.
-
-# Compute the recall
-# The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. 
-# The recall is intuitively the ability of the classifier to find all the positive samples.
-# The best value is 1 and the worst value is 0.
-
