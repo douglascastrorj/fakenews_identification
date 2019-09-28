@@ -19,14 +19,16 @@ y = rd.get_target(train)
 processor = Preprocessor()
 train_text =  processor.process_dataset(
                   train_text, 
-                  n_gram=2, 
-                  stem=True, 
-                  tags=True,
+                  n_gram=0, 
+                  stem=False, 
+                  tags=False,
                   remove_stop_words=True, 
                   remove_punct=True,
-                  pos=True,
-                  dep=True,
-                  alpha=True
+                  pos=False,
+                  dep=False,
+                  alpha=False,
+                  ent=True,
+                  vectorizer=None
                 )
 
 vectorizer = CountVectorizer()
@@ -52,7 +54,7 @@ limit = 2500
 has_more_than_limit = X.shape[1] > limit
 max_features = limit if has_more_than_limit else X.shape[1]
 
-file = open('./logs/feature_importances.txt', 'a')
+file = open('./logs/feature_importances_politics.txt', 'a')
 for f in range(0, max_features):
     print("%d. feature %d-%s (%f)" % (f + 1, indices[f], features[indices[f]], importances[indices[f]]))
     file.write( features[indices[f]]+ "\t" +str(importances[indices[f]])+"\n")

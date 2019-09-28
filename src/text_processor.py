@@ -85,6 +85,8 @@ class Preprocessor():
                             )
             for text in dataset
         ]
+        if vectorizer == None:
+            return processed_corpus
 
         X = self.vectorizer.fit_transform(processed_corpus)
         X = X.toarray()
@@ -195,7 +197,7 @@ class Preprocessor():
     def n_gram(self, tokens, n=2):
         n_grams = []
         for i in range(0, len(tokens) - 1):
-            n_grams.append(tokens[i].text)
+            # n_grams.append(tokens[i].text)
             gram = '@feature_NGram'
             for j in range(0, n):
                 if(i + j < len(tokens)):
