@@ -1,0 +1,522 @@
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: False
+stem: False
+ent: False
+alpha: False
+Remove stopwords: False
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.82      0.67      0.74        21
+        real       0.77      0.89      0.83        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.80      0.78      0.78        48
+weighted avg       0.80      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       0.86      0.78      0.82        23
+        real       0.81      0.88      0.85        25
+
+   micro avg       0.83      0.83      0.83        48
+   macro avg       0.84      0.83      0.83        48
+weighted avg       0.84      0.83      0.83        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.40      0.57        25
+        real       0.61      1.00      0.75        23
+
+   micro avg       0.69      0.69      0.69        48
+   macro avg       0.80      0.70      0.66        48
+weighted avg       0.81      0.69      0.66        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.74      0.85        23
+        real       0.81      1.00      0.89        25
+
+   micro avg       0.88      0.88      0.88        48
+   macro avg       0.90      0.87      0.87        48
+weighted avg       0.90      0.88      0.87        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.14      0.25        28
+        real       0.45      1.00      0.62        20
+
+   micro avg       0.50      0.50      0.50        48
+   macro avg       0.73      0.57      0.44        48
+weighted avg       0.77      0.50      0.41        48
+Recall Macro: 0.9537777777777776 (+/-) 0.1133603453648346
+Precision Macro: 0.6910537177090658 (+/-) 0.2812001330229508
+F1 Macro: 0.7891391113126557 (+/-) 0.18688133408004212
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: False
+stem: False
+ent: False
+alpha: False
+Remove stopwords: True
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.82      0.67      0.74        21
+        real       0.77      0.89      0.83        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.80      0.78      0.78        48
+weighted avg       0.80      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       0.86      0.78      0.82        23
+        real       0.81      0.88      0.85        25
+
+   micro avg       0.83      0.83      0.83        48
+   macro avg       0.84      0.83      0.83        48
+weighted avg       0.84      0.83      0.83        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.40      0.57        25
+        real       0.61      1.00      0.75        23
+
+   micro avg       0.69      0.69      0.69        48
+   macro avg       0.80      0.70      0.66        48
+weighted avg       0.81      0.69      0.66        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.74      0.85        23
+        real       0.81      1.00      0.89        25
+
+   micro avg       0.88      0.88      0.88        48
+   macro avg       0.90      0.87      0.87        48
+weighted avg       0.90      0.88      0.87        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.14      0.25        28
+        real       0.45      1.00      0.62        20
+
+   micro avg       0.50      0.50      0.50        48
+   macro avg       0.73      0.57      0.44        48
+weighted avg       0.77      0.50      0.41        48
+Recall Macro: 0.9537777777777776 (+/-) 0.1133603453648346
+Precision Macro: 0.6910537177090658 (+/-) 0.2812001330229508
+F1 Macro: 0.7891391113126557 (+/-) 0.18688133408004212
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: False
+stem: True
+ent: False
+alpha: False
+Remove stopwords: False
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.76      0.76      0.76        21
+        real       0.81      0.81      0.81        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.79      0.79      0.79        48
+weighted avg       0.79      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       0.88      0.91      0.89        23
+        real       0.92      0.88      0.90        25
+
+   micro avg       0.90      0.90      0.90        48
+   macro avg       0.90      0.90      0.90        48
+weighted avg       0.90      0.90      0.90        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.48      0.65        25
+        real       0.64      1.00      0.78        23
+
+   micro avg       0.73      0.73      0.73        48
+   macro avg       0.82      0.74      0.71        48
+weighted avg       0.83      0.73      0.71        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.74      0.85        23
+        real       0.81      1.00      0.89        25
+
+   micro avg       0.88      0.88      0.88        48
+   macro avg       0.90      0.87      0.87        48
+weighted avg       0.90      0.88      0.87        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.11      0.19        28
+        real       0.44      1.00      0.62        20
+
+   micro avg       0.48      0.48      0.48        48
+   macro avg       0.72      0.55      0.40        48
+weighted avg       0.77      0.48      0.37        48
+Recall Macro: 0.938962962962963 (+/-) 0.15508953120251073
+Precision Macro: 0.7242532855436081 (+/-) 0.3317359583926314
+F1 Macro: 0.800135354735839 (+/-) 0.2057850378375806
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: False
+stem: False
+ent: False
+alpha: False
+Remove stopwords: False
+Remove ponctuation: True
+
+              precision    recall  f1-score   support
+
+        fake       0.82      0.67      0.74        21
+        real       0.77      0.89      0.83        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.80      0.78      0.78        48
+weighted avg       0.80      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       0.86      0.78      0.82        23
+        real       0.81      0.88      0.85        25
+
+   micro avg       0.83      0.83      0.83        48
+   macro avg       0.84      0.83      0.83        48
+weighted avg       0.84      0.83      0.83        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.40      0.57        25
+        real       0.61      1.00      0.75        23
+
+   micro avg       0.69      0.69      0.69        48
+   macro avg       0.80      0.70      0.66        48
+weighted avg       0.81      0.69      0.66        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.74      0.85        23
+        real       0.81      1.00      0.89        25
+
+   micro avg       0.88      0.88      0.88        48
+   macro avg       0.90      0.87      0.87        48
+weighted avg       0.90      0.88      0.87        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.14      0.25        28
+        real       0.45      1.00      0.62        20
+
+   micro avg       0.50      0.50      0.50        48
+   macro avg       0.73      0.57      0.44        48
+weighted avg       0.77      0.50      0.41        48
+Recall Macro: 0.9537777777777776 (+/-) 0.1133603453648346
+Precision Macro: 0.6910537177090658 (+/-) 0.2812001330229508
+F1 Macro: 0.7891391113126557 (+/-) 0.18688133408004212
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+pos: False
+dep: False
+tags: False
+stem: False
+ent: False
+alpha: False
+Remove stopwords: False
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.81      0.62      0.70        21
+        real       0.75      0.89      0.81        27
+
+   micro avg       0.77      0.77      0.77        48
+   macro avg       0.78      0.75      0.76        48
+weighted avg       0.78      0.77      0.77        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.70      0.82        23
+        real       0.78      1.00      0.88        25
+
+   micro avg       0.85      0.85      0.85        48
+   macro avg       0.89      0.85      0.85        48
+weighted avg       0.89      0.85      0.85        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.12      0.21        25
+        real       0.51      1.00      0.68        23
+
+   micro avg       0.54      0.54      0.54        48
+   macro avg       0.76      0.56      0.45        48
+weighted avg       0.77      0.54      0.44        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.43      0.61        23
+        real       0.66      1.00      0.79        25
+
+   micro avg       0.73      0.73      0.73        48
+   macro avg       0.83      0.72      0.70        48
+weighted avg       0.82      0.73      0.70        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.04      0.07        28
+        real       0.43      1.00      0.60        20
+
+   micro avg       0.44      0.44      0.44        48
+   macro avg       0.71      0.52      0.33        48
+weighted avg       0.76      0.44      0.29        48
+Recall Macro: 0.9777777777777779 (+/-) 0.08888888888888893
+Precision Macro: 0.6251575525693667 (+/-) 0.27404991966604
+F1 Macro: 0.7515777223498521 (+/-) 0.20183517117455257
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: True
+stem: False
+ent: False
+alpha: False
+Remove stopwords: False
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.69      0.86      0.77        21
+        real       0.86      0.70      0.78        27
+
+   micro avg       0.77      0.77      0.77        48
+   macro avg       0.78      0.78      0.77        48
+weighted avg       0.79      0.77      0.77        48
+              precision    recall  f1-score   support
+
+        fake       0.83      0.87      0.85        23
+        real       0.88      0.84      0.86        25
+
+   micro avg       0.85      0.85      0.85        48
+   macro avg       0.85      0.85      0.85        48
+weighted avg       0.86      0.85      0.85        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.16      0.28        25
+        real       0.52      1.00      0.69        23
+
+   micro avg       0.56      0.56      0.56        48
+   macro avg       0.76      0.58      0.48        48
+weighted avg       0.77      0.56      0.47        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.65      0.79        23
+        real       0.76      1.00      0.86        25
+
+   micro avg       0.83      0.83      0.83        48
+   macro avg       0.88      0.83      0.83        48
+weighted avg       0.87      0.83      0.83        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.04      0.07        28
+        real       0.43      1.00      0.60        20
+
+   micro avg       0.44      0.44      0.44        48
+   macro avg       0.71      0.52      0.33        48
+weighted avg       0.76      0.44      0.29        48
+Recall Macro: 0.9087407407407408 (+/-) 0.2395833603506873
+Precision Macro: 0.6888942617666023 (+/-) 0.3653584429928355
+F1 Macro: 0.7556608232587939 (+/-) 0.20387790169639805
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 1
+pos: False
+dep: False
+tags: False
+stem: False
+ent: True
+alpha: False
+Remove stopwords: False
+Remove ponctuation: False
+
+              precision    recall  f1-score   support
+
+        fake       0.82      0.67      0.74        21
+        real       0.77      0.89      0.83        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.80      0.78      0.78        48
+weighted avg       0.80      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       0.86      0.78      0.82        23
+        real       0.81      0.88      0.85        25
+
+   micro avg       0.83      0.83      0.83        48
+   macro avg       0.84      0.83      0.83        48
+weighted avg       0.84      0.83      0.83        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.40      0.57        25
+        real       0.61      1.00      0.75        23
+
+   micro avg       0.69      0.69      0.69        48
+   macro avg       0.80      0.70      0.66        48
+weighted avg       0.81      0.69      0.66        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.74      0.85        23
+        real       0.81      1.00      0.89        25
+
+   micro avg       0.88      0.88      0.88        48
+   macro avg       0.90      0.87      0.87        48
+weighted avg       0.90      0.88      0.87        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.14      0.25        28
+        real       0.45      1.00      0.62        20
+
+   micro avg       0.50      0.50      0.50        48
+   macro avg       0.73      0.57      0.44        48
+weighted avg       0.77      0.50      0.41        48
+Recall Macro: 0.9537777777777776 (+/-) 0.1133603453648346
+Precision Macro: 0.6910537177090658 (+/-) 0.2812001330229508
+F1 Macro: 0.7891391113126557 (+/-) 0.18688133408004212
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+pos: False
+dep: False
+tags: False
+stem: True
+ent: False
+alpha: False
+Remove stopwords: True
+Remove ponctuation: True
+
+              precision    recall  f1-score   support
+
+        fake       0.81      0.62      0.70        21
+        real       0.75      0.89      0.81        27
+
+   micro avg       0.77      0.77      0.77        48
+   macro avg       0.78      0.75      0.76        48
+weighted avg       0.78      0.77      0.77        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.57      0.72        23
+        real       0.71      1.00      0.83        25
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.86      0.78      0.78        48
+weighted avg       0.85      0.79      0.78        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.12      0.21        25
+        real       0.51      1.00      0.68        23
+
+   micro avg       0.54      0.54      0.54        48
+   macro avg       0.76      0.56      0.45        48
+weighted avg       0.77      0.54      0.44        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.48      0.65        23
+        real       0.68      1.00      0.81        25
+
+   micro avg       0.75      0.75      0.75        48
+   macro avg       0.84      0.74      0.73        48
+weighted avg       0.83      0.75      0.73        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.04      0.07        28
+        real       0.43      1.00      0.60        20
+
+   micro avg       0.44      0.44      0.44        48
+   macro avg       0.71      0.52      0.33        48
+weighted avg       0.76      0.44      0.29        48
+Recall Macro: 0.9777777777777779 (+/-) 0.08888888888888893
+Precision Macro: 0.6153208831932236 (+/-) 0.25052701628088464
+F1 Macro: 0.7453659563757771 (+/-) 0.1852018404071065
+
+
+#############################################
+
+Features utilizadas: 
+NGRAM: 2
+pos: False
+dep: False
+tags: True
+stem: True
+ent: True
+alpha: False
+Remove stopwords: True
+Remove ponctuation: True
+
+              precision    recall  f1-score   support
+
+        fake       0.82      0.67      0.74        21
+        real       0.77      0.89      0.83        27
+
+   micro avg       0.79      0.79      0.79        48
+   macro avg       0.80      0.78      0.78        48
+weighted avg       0.80      0.79      0.79        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.43      0.61        23
+        real       0.66      1.00      0.79        25
+
+   micro avg       0.73      0.73      0.73        48
+   macro avg       0.83      0.72      0.70        48
+weighted avg       0.82      0.73      0.70        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.04      0.08        25
+        real       0.49      1.00      0.66        23
+
+   micro avg       0.50      0.50      0.50        48
+   macro avg       0.74      0.52      0.37        48
+weighted avg       0.76      0.50      0.35        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.26      0.41        23
+        real       0.60      1.00      0.75        25
+
+   micro avg       0.65      0.65      0.65        48
+   macro avg       0.80      0.63      0.58        48
+weighted avg       0.79      0.65      0.59        48
+              precision    recall  f1-score   support
+
+        fake       1.00      0.04      0.07        28
+        real       0.43      1.00      0.60        20
+
+   micro avg       0.44      0.44      0.44        48
+   macro avg       0.71      0.52      0.33        48
+weighted avg       0.76      0.44      0.29        48
+Recall Macro: 0.9777777777777779 (+/-) 0.08888888888888893
+Precision Macro: 0.5884439994977149 (+/-) 0.24613834894936404
+F1 Macro: 0.724332687955951 (+/-) 0.17128166675972112
+
+
+#############################################
+

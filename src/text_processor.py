@@ -58,7 +58,9 @@ class Preprocessor():
                             sentiment=False,
                             vectorizer='count',
                             lex=False,
-                            normalize=False
+                            normalize=False,
+                            tag_ngram=False,
+                            text_features=False
         ):
 
         # return processed_corpus
@@ -72,7 +74,7 @@ class Preprocessor():
         processed_corpus = [ 
             self.proccess_text(
                                 text,
-                                remove_stop_words=False, 
+                                remove_stop_words=remove_stop_words, 
                                 stem=stem, 
                                 remove_punct=remove_punct, 
                                 n_gram=n_gram, 
@@ -81,7 +83,8 @@ class Preprocessor():
                                 dep=dep, 
                                 alpha=alpha,
                                 ent=ent,
-                                sentiment=sentiment
+                                sentiment=sentiment,
+                                tag_ngram=tag_ngram
                             )
             for text in dataset
         ]
@@ -120,7 +123,20 @@ class Preprocessor():
             if normalize:
                 lex_features = preprocessing.normalize(lex_features)
 
+            _text_features = []
+            if(text_features):
+                for text in dataset:
+                    li = []
+                    li.append(self.countChar(text))
+                    li.append(self.countCharWithoutSpace(text))
+                    li.append(self.countSentences(text))
+                    li.append(self.avarageSentenceLength(text))
+                    li.append(self.maxSentenceLength(text))
+                    li.append(self.minSentenceLength(text))
+                    _text_features.append(li)
+
             X = np.concatenate((X, lex_features), axis=1)
+            X = np.concatenate((X, _text_features), axis=1)
 
         # print(len(self.vectorizer.get_feature_names()), '- Vocabulary\n\n')
         return X
@@ -136,7 +152,8 @@ class Preprocessor():
                         dep=False, 
                         alpha=False,
                         ent=False,
-                        sentiment=False
+                        sentiment=False,
+                        tag_ngram=False
         ):
 
         features = []
@@ -146,17 +163,26 @@ class Preprocessor():
             tokens = [ token for token in tokens if token.dep_ != 'punct']
         if remove_stop_words:
             tokens = [token for token in tokens if token.is_stop == False]
+       
         if n_gram > 1:
-            n_grams = n_grams + self.n_gram(tokens, n_gram)
+            texts = [token.text for token in tokens]
+            for i in range(2,n_gram + 1):
+                n_grams = n_grams + self.n_gram(texts, i)
+
+        if tag_ngram > 1:
+            token_tags = [ token.tag_ for token in tokens ]
+            for i in range(2,tag_ngram + 1):
+                n_grams = n_grams + self.n_gram(token_tags, i)
             
         if ent:
             features = features + self.extract_ents(self.nlp(text))
         for token in tokens:
-            features.append(token.text)
+            if stem:
+                features.append(token.lemma_)
+            else:
+                features.append(token.text)
 
         for token in tokens:
-            if stem:
-                features.append('@feature_lemma_'+token.lemma_)
             if pos:
                 features.append('@feature_pos_'+token.pos_)
             if tags:
@@ -194,6 +220,53 @@ class Preprocessor():
         result = words + gramatical_class
         return ' '.join(result)
 
+    def countChar(self, text):
+        return len(text)
+    
+    def countCharWithoutSpace(self,text):
+        return len(''.join(text.split(' ')))
+    
+    def countWords(self, text):
+        words = text.split(' ')
+        return len(words)
+
+    def countSentences(self, text):
+        doc = self.nlp(text)
+        count = 0
+        for sent in doc.sents:
+            count = count + 1
+        return count
+    
+    def avarageSentenceLength(self, text):
+        doc = self.nlp(text)
+        sents = doc.sents
+        avarage = 0
+        count = 0
+        for sent in sents:
+            count = count + 1
+            avarage = avarage + len(sent.text)
+        if count == 0:
+            return 0
+        return avarage/count
+
+    def maxSentenceLength(self,text):
+        doc = self.nlp(text)
+        sents = doc.sents
+        maxSentence = 0
+        for sent in sents:
+            if( len(sent.text) > maxSentence ):
+                maxSentence = len(sent.text)
+        return maxSentence
+
+    def minSentenceLength(self,text):
+        doc = self.nlp(text)
+        sents = doc.sents
+        minSentence = 9999
+        for sent in sents:
+            if( len(sent.text) < minSentence ):
+                minSentence = len(sent.text)
+        return minSentence
+
     def n_gram(self, tokens, n=2):
         n_grams = []
         for i in range(0, len(tokens) - 1):
@@ -201,10 +274,10 @@ class Preprocessor():
             gram = '@feature_NGram'
             for j in range(0, n):
                 if(i + j < len(tokens)):
-                    gram = gram + '_' + tokens[i+j].text
+                    gram = gram + '_' + tokens[i+j]
             n_grams.append(gram)
         if len(tokens) > 1:
-            n_grams.append(tokens[len(tokens) - 1].text)
+            n_grams.append(tokens[len(tokens) - 1])
         return n_grams
 
 # data = "All work and no play makes jack dull boy. All work and no play makes jack a dull boy."

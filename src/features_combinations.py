@@ -10,7 +10,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -21,7 +24,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -32,7 +38,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -43,7 +52,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -54,7 +66,24 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':False,
+        'remove_punct':False,
+        'n_gram':3,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -65,7 +94,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -76,7 +108,10 @@ def get_combinations():
         'pos':True,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -87,7 +122,10 @@ def get_combinations():
         'pos':False,
         'dep':True,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -98,7 +136,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':True,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -109,7 +150,38 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':True
+        'ent':False,
+        'lex':True,
+        'sentiment':False,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':False,
+        'remove_punct':False,
+        'n_gram':1,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':True,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':False,
+        'remove_punct':False,
+        'n_gram':1,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':2
     },
     # dois ao mesmo tempo
     {
@@ -121,7 +193,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -132,7 +207,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -143,7 +221,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -154,7 +235,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -165,7 +249,10 @@ def get_combinations():
         'pos':True,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -176,7 +263,10 @@ def get_combinations():
         'pos':False,
         'dep':True,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -187,7 +277,10 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':True,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':True,
@@ -198,18 +291,52 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':True
+        'ent':True,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
-        'remove_stop_words':False,
-        'stem':True,
-        'remove_punct':True,
+        'remove_stop_words':True,
+        'stem':False,
+        'remove_punct':False,
         'n_gram':1,
         'tags':False,
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':True,
+        'sentiment':False,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':True,
+        'remove_punct':False,
+        'n_gram':1,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':True,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':True,
+        'remove_punct':False,
+        'n_gram':1,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':2
     },
     {
         'remove_stop_words':False,
@@ -220,7 +347,24 @@ def get_combinations():
         'pos':False,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
+    },
+    {
+        'remove_stop_words':False,
+        'stem':True,
+        'remove_punct':False,
+        'n_gram':3,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1
     },
     {
         'remove_stop_words':False,
@@ -231,18 +375,24 @@ def get_combinations():
         'pos':True,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':2
     },
     {
-        'remove_stop_words':False,
+        'remove_stop_words':True,
         'stem':True,
-        'remove_punct':False,
-        'n_gram':1,
+        'remove_punct':True,
+        'n_gram':2,
         'tags':True,
         'pos':True,
         'dep':False,
         'alpha':False,
-        'ent':False
+        'ent':True,
+        'lex':True,
+        'sentiment':True,
+        'tag_ngram':2
     }
     ]
     return combinations
@@ -257,73 +407,26 @@ def use_all_features():
         'pos':True,
         'dep':True,
         'alpha':True,
-        'ent':True
+        'ent':True,
+        'sentiment': True,
+        'lex': True,
+        'tag_ngram': 2
     }]
 
 def use_custom():
-    return [{
-        'remove_stop_words':False,
-        'stem':False,
-        'remove_punct':False,
-        'n_gram':1,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    },
-    {
-        'remove_stop_words':True,
-        'stem':False,
-        'remove_punct':False,
-        'n_gram':1,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    },
-    {
-        'remove_stop_words':False,
-        'stem':True,
-        'remove_punct':False,
-        'n_gram':1,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    },
-    {
-        'remove_stop_words':False,
-        'stem':False,
-        'remove_punct':True,
-        'n_gram':1,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    },
-    {
-        'remove_stop_words':False,
-        'stem':False,
-        'remove_punct':False,
-        'n_gram':2,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    },
-    {
-        'remove_stop_words':True,
-        'stem':True,
-        'remove_punct':True,
-        'n_gram':2,
-        'tags':False,
-        'pos':False,
-        'dep':False,
-        'alpha':False,
-        'ent':False
-    }]
+    return [
+        {
+            'remove_stop_words':True,
+            'stem':False,
+            'remove_punct':True,
+            'n_gram':1,
+            'tags':False,
+            'pos':False,
+            'dep':False,
+            'alpha':False,
+            'ent':True,
+            'sentiment': True,
+            'lex': True,
+            'tag_ngram': 1
+        },
+    ]

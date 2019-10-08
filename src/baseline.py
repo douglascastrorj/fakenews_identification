@@ -12,12 +12,14 @@ import numpy as np
 from sklearn.model_selection import cross_val_score, cross_validate, ShuffleSplit
 from sklearn.model_selection import KFold
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+from sklearn.decomposition import TruncatedSVD
 
 from sklearn.metrics import recall_score, confusion_matrix
 
 import read_dataset as rd
 from text_processor import Preprocessor
 from features_combinations import get_combinations, use_custom
+
 
 ### PROCESSANDO TEXTO ######
 
@@ -39,11 +41,15 @@ def analisar_features(
   ent=False,
   alpha=False,
   lex=False,
+  sentiment=False,
+  tag_ngram=False,
+  text_features=False,
   file_path='log.txt'
 ):
 
   print('Features utilizadas: \n' )
   print('NGRAM: '+ str(n_gram) + '\n' )
+  print('TAG_NGRAM: '+ str(tag_ngram) + '\n' )
   print('tags: '+ str(tags) + '\n' )
   print('pos: '+ str(pos) + '\n' )
   print('dep: '+ str(dep) + '\n' )
@@ -51,7 +57,10 @@ def analisar_features(
   print('ent: '+ str(ent) + '\n' )
   print('alpha: '+ str(alpha) + '\n' )
   print('Remove stopwords: '+ str(remove_stop_words) + '\n' )
-  print('Remove ponctuation: '+ str(remove_punct) + '\n\n' )
+  print('Remove ponctuation: '+ str(remove_punct) + '\n' )
+  print('lex: '+ str(lex) + '\n' )
+  print('sentiment: '+ str(sentiment) + '\n' )
+  print('text_features: '+ str(text_features) + '\n' )
 
   print('Processando texto...')
 
@@ -67,11 +76,18 @@ def analisar_features(
                   dep=dep,
                   alpha=alpha,
                   vectorizer='count',
-                  lex=lex
+                  lex=lex,
+                  sentiment=sentiment,
+                  tag_ngram=tag_ngram,
+                  text_features=text_features
                 )
 
   ##              TREINANDO NAIVE               ##
-
+  print(train_text.shape)
+  print(train_text[0])
+  # 117670 total features
+  # svd = TruncatedSVD(n_components=200, random_state=42)
+  # train_text = svd.fit_transform(train_text)
   print ('Treinando modelo...')
   # text_clf = RandomForestClassifier()
   # text_clf = SVC(kernel='rbf', C=100, gamma=0.0001)
@@ -91,19 +107,24 @@ def analisar_features(
   file = open(file_path, 'a')
   file.write('Features utilizadas: \n' )
   file.write('NGRAM: '+ str(n_gram) + '\n' )
+  file.write('TAG_NGRAM: '+ str(tag_ngram) + '\n' )
   file.write('pos: '+ str(pos) + '\n' )
   file.write('dep: '+ str(dep) + '\n' )
   file.write('tags: '+ str(tags) + '\n' )
   file.write('stem: '+ str(stem) + '\n' )
   file.write('ent: '+ str(ent) + '\n' )
   file.write('alpha: '+ str(alpha) + '\n' )
+  file.write('lex: '+ str(lex) + '\n' )
+  file.write('sentiment: '+ str(sentiment) + '\n' )
+  file.write('text_features: '+ str(text_features) + '\n' )
   file.write('Remove stopwords: '+ str(remove_stop_words) + '\n' )
   file.write('Remove ponctuation: '+ str(remove_punct) + '\n\n' )
 
-  kf = KFold(n_splits=5)
+  kf = KFold(n_splits=10)
   f1 = []
   precision =[]
   recall = []
+  accuracy = []
   for train_index, test_index in kf.split(train_text):
     # print('Kfold train_index: ', train_index, '\ntest_index: ', test_index)
 
@@ -115,6 +136,7 @@ def analisar_features(
     text_clf.fit(X_train, y_train)
     y_pred = text_clf.predict(X_test)
     print(confusion_matrix(y_test, y_pred))
+    print (metrics.accuracy_score(y_test, y_pred))
     print(metrics.classification_report(y_test, y_pred, target_names=categories))
 
     file.write( metrics.classification_report(y_test, y_pred, target_names=categories) )
@@ -122,23 +144,28 @@ def analisar_features(
     precision.append(metrics.precision_score(y_test, y_pred))
     recall.append(metrics.recall_score(y_test, y_pred))
     f1.append(metrics.f1_score(y_test, y_pred))
+    accuracy.append(metrics.accuracy_score(y_test, y_pred))
 
   f1 = np.array(f1)
   precision = np.array(precision)
   recall = np.array(recall)
+  accuracy = np.array(accuracy)
 
   f1_mean =f1.mean()
   precision_mean = precision.mean()
   recall_mean = recall.mean()
+  accuracy_mean = accuracy.mean()
 
   f1_std = f1.std()
   precision_std = precision.std()
   recall_std = recall.std()
+  accuracy_std = accuracy.std()
 
   print('Escrevendo arquivo de log\n')
   file.write('Recall Macro: ' + str(recall_mean) + ' (+/-) ' + str(recall_std * 2) + '\n' )
   file.write('Precision Macro: ' + str(precision_mean) + ' (+/-) ' + str(precision_std * 2) + '\n' )
   file.write('F1 Macro: ' + str(f1_mean) + ' (+/-) ' +str(f1_std * 2) + '\n' )
+  file.write('Accuracy: ' + str(accuracy_mean) + ' (+/-) ' +str(accuracy_std * 2) + '\n' )
 
   file.write('\n\n#############################################\n\n')
   file.close() 
@@ -156,6 +183,7 @@ train_target = rd.get_target(train)
 # test_target = rd.get_target(test)
 #################################################
 
+# combinations = get_combinations()
 combinations = use_custom()
 
 
@@ -170,23 +198,12 @@ for combination in combinations:
                     dep=combination['dep'], 
                     alpha=combination['alpha'],
                     ent=combination['ent'],
-                    lex=False,
+                    lex=combination['lex'],
+                    sentiment=combination['sentiment'],
+                    tag_ngram=combination['tag_ngram'],
+                    text_features=combination['text_features'],
                     file_path='log.txt'
                     )
-
-  # analisar_features(train_text,
-  #                   stem=combination['stem'],
-  #                   remove_stop_words=combination['remove_stop_words'], 
-  #                   remove_punct=combination['remove_punct'], 
-  #                   n_gram=combination['n_gram'], 
-  #                   tags=combination['tags'], 
-  #                   pos=combination['pos'], 
-  #                   dep=combination['dep'], 
-  #                   alpha=combination['alpha'],
-  #                   ent=combination['ent'],
-  #                   lex=True,
-  #                   file_path='kfold_lex_normalized.txt'
-  #                   )
 
 #avaliacao de desempenho no conjunto de teste
 # predicted = text_clf.predict(test_text)
