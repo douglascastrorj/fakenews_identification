@@ -1,5 +1,4 @@
 def get_combinations():
-        
     combinations = [
     {
         'remove_stop_words':False,
@@ -13,7 +12,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -27,7 +27,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -41,7 +42,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -55,7 +57,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -69,7 +72,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -83,7 +87,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -97,7 +102,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -111,7 +117,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -125,7 +132,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -139,7 +147,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -153,7 +162,8 @@ def get_combinations():
         'ent':False,
         'lex':True,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -167,7 +177,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':True,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -181,7 +192,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':2
+        'tag_ngram':2,
+        'text_features':True
     },
     # dois ao mesmo tempo
     {
@@ -196,7 +208,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -210,7 +223,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -224,7 +238,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -238,7 +253,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -252,7 +268,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -266,7 +283,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -280,7 +298,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -294,7 +313,8 @@ def get_combinations():
         'ent':True,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -308,7 +328,8 @@ def get_combinations():
         'ent':False,
         'lex':True,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -322,7 +343,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':True,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -336,7 +358,23 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':2
+        'tag_ngram':2,
+        'text_features':True
+    },
+    {
+        'remove_stop_words':False,
+        'stem':True,
+        'remove_punct':False,
+        'n_gram':1,
+        'tags':False,
+        'pos':False,
+        'dep':False,
+        'alpha':False,
+        'ent':False,
+        'lex':False,
+        'sentiment':False,
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -350,7 +388,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -364,7 +403,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':1
+        'tag_ngram':1,
+        'text_features':True
     },
     {
         'remove_stop_words':False,
@@ -378,7 +418,8 @@ def get_combinations():
         'ent':False,
         'lex':False,
         'sentiment':False,
-        'tag_ngram':2
+        'tag_ngram':2,
+        'text_features':True
     },
     {
         'remove_stop_words':True,
@@ -392,7 +433,8 @@ def get_combinations():
         'ent':True,
         'lex':True,
         'sentiment':True,
-        'tag_ngram':2
+        'tag_ngram':2,
+        'text_features':True
     }
     ]
     return combinations

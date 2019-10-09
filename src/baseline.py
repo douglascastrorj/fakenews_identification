@@ -44,7 +44,7 @@ def analisar_features(
   sentiment=False,
   tag_ngram=False,
   text_features=False,
-  file_path='log.txt'
+  file_path='log_politics_and_buzzfeed.txt'
 ):
 
   print('Features utilizadas: \n' )
@@ -183,8 +183,8 @@ train_target = rd.get_target(train)
 # test_target = rd.get_target(test)
 #################################################
 
-# combinations = get_combinations()
-combinations = use_custom()
+combinations = get_combinations()
+# combinations = use_custom()
 
 
 for combination in combinations:
@@ -202,7 +202,7 @@ for combination in combinations:
                     sentiment=combination['sentiment'],
                     tag_ngram=combination['tag_ngram'],
                     text_features=combination['text_features'],
-                    file_path='log.txt'
+                    file_path='log_text_features.txt'
                     )
 
 #avaliacao de desempenho no conjunto de teste

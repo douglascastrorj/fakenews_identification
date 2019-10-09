@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import read_dataset as rd
 from text_processor import Preprocessor
 
@@ -82,25 +85,35 @@ def lexRichess(dataset):
     return mean_ttr, mean_mltd
     
     
-
+def write(file, dataset):
+    for text in dataset:
+        file.write(text + "\n")
 
 
 dataset_fake, dataset_real = getDataset(remove_stop = True)
-adj_fake = count_adj(dataset_fake)
-adj_real = count_adj(dataset_real)
-# all_adj = count_adj(dataset_fake + dataset_real)
 
-# print('\ntop 20 adj')
-# print(adj_fake)
-# print(adj_real)
+fileFake = open('fakenews.txt', 'w', encoding='utf8')
+fileTrust = open('trustnews.txt', 'w', encoding='utf8')
+
+write(fileFake, dataset_fake)
+write(fileTrust, dataset_real)
 
 
-# print('\ntop 20 ents')
-ents_fake = count_ents(dataset_fake)
-ents_real = count_ents(dataset_real)
+# adj_fake = count_adj(dataset_fake)
+# adj_real = count_adj(dataset_real)
+# # all_adj = count_adj(dataset_fake + dataset_real)
 
-print(ents_fake)
-print(ents_real)
+# # print('\ntop 20 adj')
+# # print(adj_fake)
+# # print(adj_real)
+
+
+# # print('\ntop 20 ents')
+# ents_fake = count_ents(dataset_fake)
+# ents_real = count_ents(dataset_real)
+
+# print(ents_fake)
+# print(ents_real)
 
 # print(lexRichess(dataset_fake))
 # print(lexRichess(dataset_real))
