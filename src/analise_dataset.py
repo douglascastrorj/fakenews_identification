@@ -47,13 +47,15 @@ def to_csv(data, path='output.csv'):
     df = pd.DataFrame.from_dict(data)
     df.to_csv(path)
 
-def count_adj(dataset):
+def getAdjetivos(dataset):
     data = [ nlp(content) for content in dataset ]
-
     adj = []
     for item in data:
         adj = adj + [token.text.lower() for token in item if token.tag_ == 'JJ']
-    #print(adj)
+    return adj
+
+def count_adj(dataset):
+    adj = getAdjetivos(dataset)
 
     freq = {}
     for jj in adj:
@@ -61,12 +63,20 @@ def count_adj(dataset):
     words_freq = sorted(freq.items(), key = lambda x: x[1], reverse=True)
     return words_freq[:20]
 
-#posso usar .ent_type_
-def count_ents(dataset, entType = 'GPE'):
+
+def getEnts(dataset, entType= None):
     data = [ nlp(content) for content in dataset ]
     ents = []
     for item in data:
-        ents = ents + [token.text for token in item if token.ent_type_ == entType]
+        if entType == None:
+            ents = ents + [token.text for token in item.ents]
+        if entType != None:
+            ents = ents + [token.text for token in item.ents if token.label_ == entType]
+    return ents
+
+#posso usar .ent_type_
+def count_ents(dataset, entType = 'GPE'):
+    ents = getEnts(dataset, entType)
     freq = {}
     for e in ents:
         freq[e] = freq.get(e, 0) + 1
@@ -90,30 +100,11 @@ def write(file, dataset):
         file.write(text + "\n")
 
 
-dataset_fake, dataset_real = getDataset(remove_stop = True)
+# dataset_fake, dataset_real = getDataset(remove_stop = True)
 
-fileFake = open('fakenews.txt', 'w', encoding='utf8')
-fileTrust = open('trustnews.txt', 'w', encoding='utf8')
+# fileFake = open('fakenews.txt', 'w', encoding='utf8')
+# fileTrust = open('trustnews.txt', 'w', encoding='utf8')
 
-write(fileFake, dataset_fake)
-write(fileTrust, dataset_real)
+# write(fileFake, dataset_fake)
+# write(fileTrust, dataset_real)
 
-
-# adj_fake = count_adj(dataset_fake)
-# adj_real = count_adj(dataset_real)
-# # all_adj = count_adj(dataset_fake + dataset_real)
-
-# # print('\ntop 20 adj')
-# # print(adj_fake)
-# # print(adj_real)
-
-
-# # print('\ntop 20 ents')
-# ents_fake = count_ents(dataset_fake)
-# ents_real = count_ents(dataset_real)
-
-# print(ents_fake)
-# print(ents_real)
-
-# print(lexRichess(dataset_fake))
-# print(lexRichess(dataset_real))
